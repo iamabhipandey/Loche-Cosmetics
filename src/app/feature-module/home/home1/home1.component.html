@@ -1,0 +1,991 @@
+<section class="single-banner-section">
+  <div class="banner-wrapper">
+
+    <!-- Floating Sparkle Stars -->
+    <div class="sparkle sparkle-1"></div>
+    <div class="sparkle sparkle-2"></div>
+    <div class="sparkle sparkle-3"></div>
+    <div class="sparkle sparkle-4"></div>
+
+    <!-- Banner Image -->
+    <img src="assets/img/banners/final-banner2.webp" alt="Banner" class="banner-img">
+
+  </div>
+</section>
+
+
+
+<div class="container">
+  <div class="banner-yacht-type-slider">
+    <owl-carousel-o [options]="yachttypeOwlOptions">
+      <ng-template carouselSlide>
+        <div class="slider-card">
+          <div class="banner-slider-icon">
+            <span><img src="assets/img/icons/natural-ingredients.png" alt="Img" /></span>
+          </div>
+          <h6>{{"HOME.NATURAL" | translate}}</h6>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slider-card">
+          <div class="banner-slider-icon">
+            <span><img src="assets/img/icons/wake-up.png" alt="Img" /></span>
+          </div>
+          <h6>{{"HOME.WAKE_UP" | translate}}</h6>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slider-card">
+          <div class="banner-slider-icon">
+            <span><img src="assets/img/icons/science-and-tech.png" alt="Img" /></span>
+          </div>
+          <h6>{{"HOME.SEIENCE_BACKEND" | translate}}</h6>
+        </div>
+      </ng-template>
+      <ng-template carouselSlide>
+        <div class="slider-card slider-card-active">
+          <div class="banner-slider-icon">
+            <span><img src="assets/img/icons/healthcare.png" alt="Img" /></span>
+          </div>
+          <h6>{{"HOME.EASY_TO_CARRY" | translate}}</h6>
+        </div>
+      </ng-template>
+    <div class="slider-card">
+        <div class="banner-slider-icon">
+          <span><img src="assets/img/icons/banner-slider-03.svg" alt="Img" /></span>
+        </div>
+        <h6>50+ {{"HOME.GUESTS" | translate}}</h6>
+      </div>
+    </owl-carousel-o>
+  </div>
+  <div class="section-header-two">
+    <h2>{{"HOME.OUR_BEST_SELECTION" | translate}}</h2>
+    <p>{{"HOME.EXPLORE" | translate}}
+     
+    </p>
+  </div>
+  <div class="row yacht-category-lists">
+    <div class="custom-col">
+      <div class="yacht-cat-grid">
+        <div class="yatch-card-img">
+          <!-- <a [routerLink]="routes.listingGrid"> -->
+             <a >
+            <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid"
+              alt="product" /></a>
+        </div>
+        <div class="card-content d-flex align-items-center justify-content-between">
+          <div>
+            <h4><a [routerLink]="routes.listingGrid">{{"HOME.HANGOVER" | translate}}</a></h4>
+            <span>3 {{"HOME.PRODUCTS" | translate}} </span>
+          </div>
+          <a  class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="custom-col">
+      <div class="yacht-cat-grid">
+        <div class="yatch-card-img">
+          <a >
+            <img src="assets/img/banners/hangover2.jpeg" class="img-fluid"
+              alt="Sleep" /></a>
+        </div>
+        <div class="card-content d-flex align-items-center justify-content-between">
+          <div>
+            <h4><a >{{"HOME.SLEEP" | translate}}</a></h4>
+            <span>2 {{"HOME.PRODUCTS" | translate}}</span>
+          </div>
+          <a  class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="custom-col">
+      <div class="yacht-cat-grid">
+        <div class="yatch-card-img">
+          <a ><img src="assets/img/banners/kid-product.png" class="img-fluid"
+              alt="yacht" /></a>
+        </div>
+        <div class="card-content d-flex align-items-center justify-content-between">
+          <div>
+            <h4><a >{{"HOME.HANGOVER_KITS" | translate}}</a></h4>
+            <span>4 {{"HOME.PRODUCTS" | translate}}</span>
+          </div>
+          <a  class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
+        </div>
+      </div>
+    </div>
+ <div class="col-md-12">
+      <div class="view-more-btn text-center">
+        <a class="btn btn-secondary">{{"HOME.VIEW_MORE" | translate}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!------------------ product information section ------------->
+<section class="wellness-section py-5">
+  <div class="container">
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs wellness-tabs mb-4" id="wellnessTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="hangover-tab" data-bs-toggle="tab" data-bs-target="#hangover" type="button"
+          role="tab">
+          {{"HOME.HANGOVER" | translate}}
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="sleep-tab" data-bs-toggle="tab" data-bs-target="#sleep" type="button" role="tab">
+          {{"HOME.SLEEP" | translate}}
+        </button>
+      </li>
+
+
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="wellnessTabContent">
+
+      <!-- Sleep Tab -->
+      <div class="tab-pane fade" id="sleep" role="tabpanel">
+
+        <div class="row align-items-center g-5">
+
+          <!-- Left Image -->
+          <div class="col-lg-6">
+            <div class="floating-img-wrapper">
+              <img class="main-img" src="assets/img/banners/hangoverimg.jpeg">
+              <img class="small-img top-right" src="assets/img/banners/hangoverimg.jpeg">
+              <img class="small-img bottom-left" src="assets/img/banners/hangoverimg.jpeg">
+            </div>
+          </div>
+
+
+
+
+          <!-- Right Content -->
+          <div class="col-lg-6">
+            <h2 class="section-title">{{"HOME.RESTFULL" | translate}} </h2>
+            <p class="section-text">{{"HOME.RESTFULL_DESC" | translate}}
+            
+            </p>
+            <div class="view-more-btn mt-3">
+              <a class="btn btn-secondary">{{"HOME.LEARN_MORE" | translate}}</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Hangover Tab -->
+      <div class="tab-pane fade show active" id="hangover" role="tabpanel">
+
+        <div class="row align-items-center g-5">
+
+          <!-- Left Image -->
+          <!-- <div class="col-lg-6">
+            <div class="image-wrapper shadow-lg rounded-4 overflow-hidden">
+              <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid w-100" alt="Hangover">
+            </div>
+          </div> -->
+          <div class="col-lg-7">
+            <div class="hangover-collage">
+
+              <img src="assets/img/banners/hangoverimg.jpeg" class="collage-main">
+
+              <img src="assets/img/banners/hangoverimg.jpeg" class="collage-side collage-left">
+
+              <img src="assets/img/banners/hangoverimg.jpeg" class="collage-side collage-right">
+
+            </div>
+          </div>
+
+
+          <!-- Right Content -->
+          <div class="col-lg-5 ps-4">
+            <h2 class="section-title ps-4">{{"HOME.HANGOVER_RELIEF" | translate}}</h2>
+            <p class="section-text ps-4">
+              {{"HOME.HANGOVER_RELIEF_DESC" | translate}}
+             
+            </p>
+            <div  class="view-more-btn mt-3 ms-3">
+              <a class="btn btn-secondary">{{"HOME.LEARN_MORE" | translate}}</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<!-- product section -->
+<section class="section features-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Heading title-->
+        <div class="section-heading heading-three mx-auto" data-aos="fade-down">
+          <h2 class="d-flex justify-content-center">{{"HOME.MOST_LOVING" | translate}}</h2>
+
+        </div>
+        <!-- /Heading title -->
+        <div class="bike-feature-slider nav-center">
+          <owl-carousel-o [options]="bikefeatureOwlOptions">
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="listing-item bike-list">
+                  <div class="listing-img">
+                    <div class="image-slider">
+                      <div class="slide-images">
+                        <a [routerLink]="routes.listingDetails">
+                          <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid" alt="img" />
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="listing-content">
+                    
+                    <div class="listing-features align-items-center justify-content-between">
+                                              <h3 class="listing-title">
+                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNINGSHOT" | translate}}</a>
+                        </h3>
+                      <div class="list-rating">
+                        <div class="list-ratings">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star"></i>
+                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="listing-button">
+                      <div class="listing-price mb-2">
+                        <h6>₹ 1600 </h6>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
+                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                          <i class="feather icon-heart"></i>
+                        </a>
+                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
+                      </div>
+                    </div>
+                    <!-- <div class="feature-text">
+                      <span class="bg-danger">Featured</span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="listing-item bike-list">
+                  <div class="listing-img">
+                    <div class="image-slider">
+                      <div class="slide-images">
+                        <a [routerLink]="routes.listingDetails">
+                          <img src="assets/img/banners/hangover2.jpeg" class="img-fluid" alt="img" />
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="listing-content">
+                    
+                    <div class="listing-features align-items-center justify-content-between">
+                                              <h3 class="listing-title">
+                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNING_GRAPE" | translate}}</a>
+                        </h3>
+                      <div class="list-rating">
+                        <div class="list-ratings">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star"></i>
+                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="listing-button">
+                      <div class="listing-price mb-2">
+                        <h6>₹ 2600 </h6>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
+                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                          <i class="feather icon-heart"></i>
+                        </a>
+                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
+                      </div>
+                    </div>
+                    <!-- <div class="feature-text">
+                      <span class="bg-danger">Featured</span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="listing-item bike-list">
+                  <div class="listing-img">
+                    <div class="image-slider">
+                      <div class="slide-images">
+                        <a [routerLink]="routes.listingDetails">
+                          <img src="assets/img/banners/hangover3.jpeg" class="img-fluid" alt="img" />
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="listing-content">
+                    
+                    <div class="listing-features align-items-center justify-content-between">
+                                              <h3 class="listing-title">
+                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNINGSHOT" | translate}}</a>
+                        </h3>
+                      <div class="list-rating">
+                        <div class="list-ratings">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star"></i>
+                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="listing-button">
+                      <div class="listing-price mb-2">
+                        <h6>₹ 1600 </h6>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
+                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                          <i class="feather icon-heart"></i>
+                        </a>
+                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
+                      </div>
+                    </div>
+                    <!-- <div class="feature-text">
+                      <span class="bg-danger">Featured</span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template carouselSlide>
+              <div class="item">
+                <div class="listing-item bike-list">
+                  <div class="listing-img">
+                    <div class="image-slider">
+                      <div class="slide-images">
+                        <a [routerLink]="routes.listingDetails">
+                          <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid" alt="img" />
+                        </a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="listing-content">
+                    
+                    <div class="listing-features align-items-center justify-content-between">
+                                              <h3 class="listing-title">
+                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNINGSHOT" | translate}}</a>
+                        </h3>
+                      <div class="list-rating">
+                        <div class="list-ratings">
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star filled"></i>
+                          <i class="fas fa-star"></i>
+                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="listing-button">
+                      <div class="listing-price mb-2">
+                        <h6>₹ 1600 </h6>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
+                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                          <i class="feather icon-heart"></i>
+                        </a>
+                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
+                      </div>
+                    </div>
+                    <!-- <div class="feature-text">
+                      <span class="bg-danger">Featured</span>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+
+          </owl-carousel-o>
+        </div>
+
+        <div class="view-all-btn text-center aos" data-aos="fade-down">
+          <a  class="btn btn-secondary">{{"HOME.VIEW_ALL" | translate}}</a>
+          <!-- [routerLink]="routes.listingGrid" -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-bg">
+    <img src="assets/img/bg/destination-bg-01.png" class="img-fluid shape-01" alt="img" />
+    <img src="assets/img/bg/feature-bg.png" class="img-fluid shape-02" alt="img" />
+  </div>
+</section>
+<!-- end product section -->
+ <!-- Benefits section  -->
+<section class="renting-yacht-sec"> 
+  <div class="sec-round-colors">
+    <span class="bg-orange round-small"></span>
+    <span class="bg-orange round-small"></span>
+    <span class="bg-orange round-small"></span>
+    <span class="bg-dark-blue round-small"></span>
+    <span class="bg-dark-blue round-big"></span>
+    <span class="bg-orange round-big"></span>
+  </div>
+  <div class="sec-bg">
+    <img src="assets/img/bg/ship-part-bg-01.png" alt="Bg" />
+  </div>
+  <div class="container">
+    <div class="section-header-two">
+      <h2>{{"HOME.BENIFITS" | translate}}</h2>
+      <p>
+        <span>{{"HOME.BENIFITS_DESC" | translate}}</span>
+      </p>
+    </div>
+    <div class="renting-yacht-benifits d-flex align-items-center justify-content-between">
+      <ul>
+        <li>
+          <span class="benifit-icon"><img src="assets/img/icons/benifits-icon-05.svg" alt="icon" /></span>
+          <div class="benifit-contents">
+            <h5>{{"HOME.FAST" | translate}}</h5>
+            <p>
+              {{"HOME.FAST_DESC" | translate}}
+              
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="benifit-icon"><img src="assets/img/icons/benifits-icon-04.svg" alt="icon" /></span>
+          <div class="benifit-contents">
+            <h5>{{"HOME.POWER" | translate}}</h5>
+            <p>{{"HOME.POWER_DESC" | translate}}
+            
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="benifit-icon"><img src="assets/img/icons/benifits-icon-05.svg" alt="icon" /></span>
+          <div class="benifit-contents">
+            <h5>{{"HOME.GENTAL" | translate}}</h5>
+            <p>
+              {{"HOME.GENTAL_DESC" | translate}}
+            
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="yatcht-center-img">
+        <span><img src="assets/img/banners/hangoverimg.jpeg" class="img-fluids" alt="Img" /></span>
+        <span class="roung-img-bg"></span>
+      </div>
+      <ul>
+        <li>
+          <span class="benifit-icon"><img src="assets/img/icons/benifits-icon-03.svg" alt="icon" /></span>
+          <div class="benifit-contents">
+            <h5>{{"HOME.SUPPORT" | translate}}</h5>
+            <p>
+              {{"HOME.SUPPORT_DESC" | translate}}
+            
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="benifit-icon"><img src="assets/img/icons/benifits-icon-02.svg" alt="icon" /></span>
+          <div class="benifit-contents">
+            <h5>{{"HOME.BACKED" | translate}}</h5>
+            <p>
+              {{"HOME.BACKED_DESC" | translate}}
+              
+            </p>
+          </div>
+        </li>
+        <li>
+          <span class="benifit-icon"><img src="assets/img/icons/benifits-icon-01.svg" alt="icon" /></span>
+          <div class="benifit-contents">
+            <h5>{{"HOME.USE" | translate}}</h5>
+            <p>
+              {{"HOME.USE_DESC" | translate}}
+            
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- /Benefits section -->
+<!----------------------- FAQ ------------------>
+<section class="ms-faq-section py-5">
+  <div class="container">
+
+    <!-- ANGULAR TABS -->
+    <div class="ms-faq-tabs d-flex justify-content-center mb-4">
+      <button class="tab-btn" [class.active]="activeTab === 'hangover'" (click)="activeTab = 'hangover'">
+        {{"HOME.FAQ" | translate}}
+      </button>
+
+      <button class="tab-btn" [class.active]="activeTab === 'sleep'" (click)="activeTab = 'sleep'">
+        {{"HOME.AID_FAQ" | translate}}
+      </button>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div class="tab-content">
+
+      <!-- HANGOVER FAQ -->
+     <div *ngIf="activeTab === 'hangover'">
+  <div *ngFor="let h of hangoverFAQ; let i = index" class="ms-faq-card">
+
+    <div class="question" (click)="toggle(i, 'hang')">
+      {{ h.q | translate }}
+      <span class="icon" [class.open]="openedHang === i">▼</span>
+    </div>
+
+    <div class="answer" *ngIf="openedHang === i">
+      {{ h.a | translate }}
+    </div>
+
+  </div>
+</div>
+
+
+      <!-- SLEEP FAQ -->
+      <div *ngIf="activeTab === 'sleep'">
+        <div *ngFor="let s of sleepFAQ; let j = index" class="ms-faq-card">
+
+          <div class="question" (click)="toggle(j, 'sleep')">
+            {{ s.q | translate}}
+            <span class="icon" [class.open]="openedSleep === j">▼</span>
+          </div>
+
+          <div class="answer" *ngIf="openedSleep === j">
+            {{ s.a | translate}}
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- <section class="feature-section py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-6">
+        <div class="feature-box text-center p-4">
+          <img src="assets/img/icons/flask.png" class="feature-img" alt="">
+          <h6 class="fw-bold mt-3">{{'HOME.PATENTED' | translate}}</h6>
+          <p class="small text-muted mb-0">{{'HOME.HANGOVER_RELIEF' | translate}}</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="feature-box text-center p-4">
+          <img src="assets/img/icons/mass-production.png" class="feature-img" alt="">
+          <h6 class="fw-bold mt-3">{{'HOME.DIRECT' | translate}}</h6>
+          <p class="small text-muted mb-0">{{'HOME.QUALITY_CONTROL' | translate}}</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="feature-box text-center p-4">
+          <img src="assets/img/icons/dairy-products.png" class="feature-img" alt="">
+          <h6 class="fw-bold mt-3">{{'HOME.COMFORTABLE' | translate}}</h6>
+          <p class="small text-muted mb-0">{{'HOME.NO_DISCOMFORT' | translate}}</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="feature-box text-center p-4">
+          <img src="assets/img/icons/juice.png" class="feature-img" alt="">
+          <h6 class="fw-bold mt-3">{{'HOME.REFRESHING' | translate}}</h6>
+          <p class="small text-muted mb-0">{{'HOME.MANGO' | translate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+
+<!-- /Banner -->
+
+<!-- <section class="recommend-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <div class="recommend-tag mb-3">{{'HOME.RECOMMEND' | translate}}</div>
+        <h2 class="fw-bold mb-4">{{'HOME.I_RECOMMEND' | translate}}</h2>
+        <div class="recommend-box d-flex align-items-center">
+          <span class="num-circle">1</span>
+          <p class="mb-0">{{'HOME.OFFICE_WORKER' | translate}}</p>
+        </div>
+        <div class="recommend-box d-flex align-items-center">
+          <span class="num-circle">2</span>
+          <p class="mb-0">{{'HOME.PEOPLE' | translate}}</p>
+        </div>
+        <div class="recommend-box d-flex align-items-center">
+          <span class="num-circle">3</span>
+          <p class="mb-0">{{'HOME.CLEAN_TASTE' | translate}}</p>
+        </div>
+        <div class="recommend-box d-flex align-items-center">
+          <span class="num-circle">4</span>
+          <p class="mb-0">{{'HOME.INTROVERT' | translate}}</p>
+        </div>
+        <div class="recommend-box d-flex align-items-center">
+          <span class="num-circle">5</span>
+          <p class="mb-0">{{'HOME.PREFER_SOMETHING' | translate}}</p>
+        </div>
+      </div>
+
+<div class="col-lg-6 text-center mt-5 mt-lg-0">
+  <div class="morning-shot-box p-4 shadow-lg rounded-4">
+    <img src="assets/img/icons/sectionn2img.png" class="img-fluid morning-shot-img" alt="Product">
+    <div class="caption-text mt-4">
+      <h3 class="fw-bold mb-1">{{'HOME.YESTERDAY' | translate}}<br>{{'HOME.TODAY' | translate}}</h3>
+      <p class="tagline fw-semibold">{{'HOME.FUN_LIGHT' | translate}}!</p>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+
+<section class="feature-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <div class="feature-content">
+          <span class="point-badge">POINT 01</span>
+          <h2 class="title mt-3">
+            {{'HOME.PATENTED' | translate}}<br>
+            {{'HOME.PROVEN' | translate}}
+          </h2>
+          <p class="subtitle">{{'HOME.FERMENTED' | translate}}</p>
+          <div class="highlight-box mt-4">
+            <span class="highlight-title">{{'HOME.GOSSEBERRY' | translate}}</span>
+            <p class="highlight-text">
+             {{'HOME.GOSSEBERRY_DESC' | translate}} 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <div class="feature-img-box">
+          <img src="assets/img/icons/j.jpg" class="img-fluid rounded-circle shadow-lg feature-img1" alt="Ingredients">
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <h3 class="garcinia-title">{{'HOME.GARCINIA_EXTRACT' | translate}}</h3>
+      <h2 class="cut-title">{{'HOME.CARBO' | translate}}!</h2>
+    </div>
+    <div class="row text-center mt-4">
+      <div class="col-4 col-md-2 mb-3">
+        <img src="assets/img/icons/diet.png" class="icon-img" alt="">
+        <p class="icon-text">{{'HOME.WEIGHT_CONTROL' | translate}}</p>
+      </div>
+      <div class="col-4 col-md-2 mb-3">
+        <img src="assets/img/icons/weight-scale.png" class="icon-img" alt="">
+        <p class="icon-text">{{'HOME.BMI' | translate}}</p>
+      </div>
+      <div class="col-4 col-md-2 mb-3">
+        <img src="assets/img/icons/cardiogram.png" class="icon-img" alt="">
+        <p class="icon-text">{{'HOME.HEART' | translate}}</p>
+      </div>
+      <div class="col-4 col-md-2 mb-3">
+        <img src="assets/img/icons/digestive-organ.png" class="icon-img" alt="">
+        <p class="icon-text">{{'HOME.DIGEST' | translate}}</p>
+      </div>
+      <div class="col-4 col-md-2 mb-3">
+        <img src="assets/img/icons/slim.png" class="icon-img" alt="">
+        <p class="icon-text">{{'HOME.FAT' | translate}}</p>
+      </div>
+      <div class="col-4 col-md-2 mb-3">
+        <img src="assets/img/icons/target (2).png" class="icon-img" alt="">
+        <p class="icon-text">{{'HOME.FOOD' | translate}}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="flavor-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-white">{{'HOME.SWEET_MANGO' | translate}}</h2>
+      <p class="text-light">{{'HOME.BOOST' | translate}}!</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card flavor-card berry-card h-100 shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
+            <span class="badge bg-purple mb-2 px-3 py-2 rounded-pill">{{'HOME.MORNINGSHOT' | translate}}</span>
+            <h3 class="fw-bold text-purple">{{'HOME.MIXED_BERRY' | translate}}</h3>
+            <p class="text-muted">{{'HOME.FIRST_TASTE' | translate}}</p>
+            <ul class="list-unstyled mt-3 mb-4 text-purple">
+              <li>🌿 {{'HOME.MELLOW' | translate}}</li>
+              <li>🍇 {{'HOME.RICH_FRUIT' | translate}}</li>
+              <li>✨ {{'HOME.SMOOTH' | translate}}</li>
+            </ul>
+            <div class="mt-4">
+              <button class="btn btn-purple px-4 py-2 rounded-pill fw-semibold">
+                {{'HOME.TRY_BERRY' | translate}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card flavor-card mango-card h-100 shadow-lg border-0 rounded-4">
+          <div class="card-body p-4">
+            <span class="badge bg-orange mb-2 px-3 py-2 rounded-pill">{{'HOME.MORNINGSHOT' | translate}}</span>
+            <h3 class="fw-bold text-orange">{{'HOME.MANGO_FLAVOR' | translate}}</h3>
+            <p class="text-muted">{{'HOME.SWEETNESS' | translate}}</p>
+            <ul class="list-unstyled mt-3 mb-4 text-orange">
+              <li>🥭 {{'HOME.TROPICAL' | translate}}</li>
+              <li>🍈 {{'HOME.REFRESHING_TASTE' | translate}}</li>
+              <li>✨ {{'HOME.SOFT_FINISH' | translate}}</li>
+            </ul>
+
+            <div class="mt-4">
+              <button class="btn btn-orange px-4 py-2 rounded-pill fw-semibold">
+                {{'HOME.TRY_MANGO' | translate}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ingredients-section py-5">
+  <div class="container">
+    <section class="highlight-msg pb-5">
+  <div class="container text-center">
+    <span class="badge bg-black px-4 py-2 fs-6">{{'HOME.FEELING' | translate}}</span>
+    <h2 class="fw-bold mt-4">{{'HOME.HESITATION' | translate}}</h2>
+    <p class="text-muted fs-5">{{'HOME.ONE_BITE' | translate}}</p>
+  </div>
+</section>
+
+    <div class="row g-2 justify-content-center">
+
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="ingredient-card rounded-4 shadow-sm p-3 text-center">
+          <img src="assets/img/icons/amala.png" class="img-fluid mb-3" alt="">
+          <h5 class="fw-semi-bold">{{'HOME.INDIAN_GOSSEBERRY' | translate}}</h5>
+          <p class="small text-muted mb-0">{{'HOME.EMBLICA' | translate}}</p>
+          <p class="small fw-semibold text-primary">{{'HOME.EXTRACT' | translate}} 42.5 mg</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="ingredient-card rounded-4 shadow-sm p-3 text-center">
+          <img src="assets/img/icons/ginger.png" class="img-fluid mb-3" alt="">
+          <h5 class="fw-semi-bold">{{'HOME.GINGER' | translate}}</h5>
+          <p class="small text-muted mb-0">{{'HOME.RHIZOME' | translate}}</p>
+          <p class="small fw-semibold text-primary">{{'HOME.EXTRACT' | translate}} 1.2 mg</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="ingredient-card rounded-4 shadow-sm p-3 text-center">
+          <img src="assets/img/icons/date.png" class="img-fluid mb-3" alt="">
+          <h5 class="fw-semi-bold">{{'HOME.DATE_PALM' | translate}}</h5>
+          <p class="small text-muted mb-0">{{'HOME.PHOENIX' | translate}}</p>
+          <p class="small fw-semibold text-primary">{{'HOME.EXTRACT' | translate}} 43.4 mg</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="ingredient-card rounded-4 shadow-sm p-3 text-center">
+          <img src="assets/img/icons/seed powder.png" class="img-fluid mb-3" alt="">
+          <h5 class="fw-semi-bold">{{'HOME.FENUGREEK' | translate}}</h5>
+          <p class="small text-muted mb-0">{{'HOME.FENUGREEK_POWDER' | translate}}</p>
+          <p class="small fw-semibold text-primary">{{'HOME.EXTRACT' | translate}} 21.9 mg</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="ingredient-card rounded-4 shadow-sm p-3 text-center">
+          <img src="assets/img/icons/grape.png" class="img-fluid mb-3" alt="">
+          <h5 class="fw-semi-bold">{{'HOME.GRAPES' | translate}}</h5>
+          <p class="small text-muted mb-0">{{'HOME.VITIS' | translate}}</p>
+          <p class="small fw-semibold text-primary">{{'HOME.EXTRACT' | translate}} 16.9 mg</p>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+        <div class="ingredient-card rounded-4 shadow-sm p-3 text-center">
+          <img src="assets/img/icons/termerik.png" class="img-fluid mb-3" alt="">
+          <h5 class="fw-semi-bold">{{'HOME.ROOT' | translate}}</h5>
+          <p class="small text-muted mb-0">{{'HOME.LONGA' | translate}}</p>
+          <p class="small fw-semibold text-primary">{{'HOME.EXTRACT' | translate}}  25.0 mg</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+ <div class="hero-section">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h1 class="hero-title">
+          {{ 'HOME.Advanced_Hybrid' | translate }} <br>
+          {{ 'HOME.HANGOVER' | translate }}
+        </h1>
+        <button class="hero-btn" >
+            {{ 'HOME.LEARN_MORE' | translate }}
+        </button>
+      </div>
+
+      <div class="col-lg-7 text-center" >
+        <img src="assets/img/banners/drink.webp" alt="Hero Image" class="hero-image">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="lenisna-section mb-5">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="lenisna-grid">
+          <img src="assets/img/banners/hang2.avif" class="grid-img">
+          <img src="assets/img/banners/drink5.jpg" class="grid-img">
+          <img src="assets/img/banners/drink3.webp" class="grid-img">
+        </div>
+      </div>
+
+      <div class="col-lg-4 ps-lg-5" [routerLink]="routes.listingGrid">
+        <h2 class="lenisna-title">{{ 'HOME.RESTORE_YOUR' | translate }}<br> {{ 'HOME.NATURAL_VOLUME' | translate }}</h2>
+        <p class="lenisna-tagline">{{ 'HOME.FULLNESS_NATURALLY_RESTORED' | translate }}</p>
+        <button class="lenisna-button">{{ 'HOME.LEARN_MORE' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="affiliates-section container">
+  <h2 class="affiliates-title">{{ 'HOME.EMPOWERING_GLOBAL_SYNERGIES' | translate }}</h2>
+
+  <div class="affiliates-wrapper container">
+
+     <a target="_blank" rel="noopener noreferrer"
+          href="https://wholesale.stylekorean.com/?utm_source=stylekorean&utm_medium=referral&utm_campaign=stylekorean_gl_bt_pc">
+
+    <div class="affiliate-card glass">
+      <div class="top mt-4">
+        <a target="_blank" rel="noopener noreferrer"
+          href="https://wholesale.stylekorean.com/?utm_source=stylekorean&utm_medium=referral&utm_campaign=stylekorean_gl_bt_pc">
+
+          <img src="assets/img/banners/stylekorean_logo.png" class="logo">
+        </a>
+
+        <h4 class="mt-4">{{ 'HOME.STYLE_KOREAN' | translate }}</h4>
+        <p>{{ 'HOME.AESTHETIC_COSMETICS_MANUFACTURING' | translate }}</p>
+
+      </div>
+
+      <div class="bottom-circle">
+        <img src="assets/img/banners/2148963960.jpg">
+      </div>
+    </div>
+    </a>
+
+         <a href="https://myindia.co.kr/" target="_blank" rel="noopener noreferrer">
+    <div class="affiliate-card gradient">
+      <div class="top">
+        <a href="https://myindia.co.kr/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/loche-logo-white-300x300.png" style="width:70px;" class="logo">
+        </a>
+        <h4>{{ 'HOME.MYINDIA' | translate }}</h4>
+        <p>{{ 'HOME.CDSCO_CERTIFICATION' | translate }}</p>
+      </div>
+      <div class="bottom-circle">
+        <img src="assets/img/banners/b2bimg.png">
+      </div>
+    </div>
+    </a>
+
+      <a href="https://bellaluna.in/" target="_blank" rel="noopener noreferrer">
+    <div class="affiliate-card neu">
+      <div class="top">
+        <a href="https://bellaluna.in/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/bellaluna-logo.webp" class="logo">
+        </a>
+        <h4 class="mt-2">{{ 'HOME.BELLALUNA' | translate }}</h4>
+        <p>{{ 'HOME.COSMETICS_OEM_MANUFACTURING' | translate }}</p>
+      </div>
+      <div class="bottom-circle">
+        <img src="assets/img/header-bg.png">
+      </div>
+    </div>
+</a>
+
+      <a href="https://loche.in/" target="_blank" rel="noopener noreferrer">
+    <div class="affiliate-card split">
+      <div class="top">
+        <a href="https://loche.in/" target="_blank" rel="noopener noreferrer">
+          <img src="assets/img/Loche-India-Logo-PNG.png" style="width:70px; " class="logo">
+        </a>
+        <h4>{{ 'HOME.LOCHE_LOGISTICS' | translate }}</h4>
+        <p>{{ 'HOME.INTERNATIONAL_LOGISTICS' | translate }}</p>
+      </div>
+      <div class="bottom-circle">
+        <img src="assets/img/banners/transport.png" class="thumb">
+      </div>
+    </div>
+</a>
+  </div>
+</div>  -->
