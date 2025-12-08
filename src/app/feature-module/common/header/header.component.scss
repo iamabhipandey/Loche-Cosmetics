@@ -19,7 +19,10 @@ $__whitecolor: #ffffff;
 .navsection {
     border-top: 0.5px solid gray;
 }
-
+a.nav-link.header-login.notification {
+    background: #e4e4e4;
+    /* padding: 10px 10px; */
+}
 .header-top-social-links {
     margin-left: 15px;
     border-left: 1px solid gray;

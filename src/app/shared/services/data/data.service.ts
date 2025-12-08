@@ -82,118 +82,177 @@ export class DataService {
 
 public header: header[] = [
   {
-    tittle: 'HEADER.COMPANY',
+    tittle: 'About Us',
     showAsTab: false,
     separateRoute: false,
     menu: [
-      { menuValue: 'HEADER.CEO_GREETING', routes: routes.CeoGreeting,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'HEADER.VISION', routes: routes.Vision2030Module, hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'HEADER.HISTORY', routes: routes.CompanyHistory, hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'HEADER.SOCIAL_CONTRIBUTION', routes: routes.SocialContribution, hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'HEADER.RND_TECH', routes: routes.CeoGreeting,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'HEADER.CLEAN_ROOM', routes: routes.CleanRoom,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      // { menuValue: 'HEADER.CEO_GREETING', routes: routes.CeoGreeting,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      // { menuValue: 'HEADER.VISION', routes: routes.Vision2030Module, hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      // { menuValue: 'HEADER.HISTORY', routes: routes.CompanyHistory, hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      // { menuValue: 'HEADER.SOCIAL_CONTRIBUTION', routes: routes.SocialContribution, hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      // { menuValue: 'HEADER.RND_TECH', routes: routes.CeoGreeting,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      // { menuValue: 'HEADER.CLEAN_ROOM', routes: routes.CleanRoom,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'VT Story',   hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'Village Town',  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'VTs Thoughts', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'Reedles Universe',  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'VT and CICA',  hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'CICA Story', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'CICA Line', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'Store', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+      { menuValue: 'Retail Stores', hasSubRoute: false, showSubRoute: false, subMenus: [],},
     ],
   },
-  {
-    tittle: 'HEADER.KEY_INGREDIENT',
+  // {
+  //   tittle: 'HEADER.KEY_INGREDIENT',
+  //   showAsTab: false,
+  //   separateRoute: false,
+  //   menu: [
+  //     { menuValue: 'HEADER.AMLA',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //     { menuValue: 'HEADER.GARCIA',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //     { menuValue: 'B.C',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //   ]
+  // },
+    {
+    tittle: 'Shopping',
     showAsTab: false,
     separateRoute: false,
     menu: [
-      { menuValue: 'HEADER.AMLA', 
-        hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'HEADER.GARCIA', 
-        hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'B.C', 
-        hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Product List',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Best',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'New',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Composition set',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Sale',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'All',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
     ]
   },
-    {
-    tittle: 'HEADER.SHOPPING',
-      showAsTab: false,
-      separateRoute: true,
-      hasSubRoute: false,
-      showSubRoute: false,
-        },
-
-  {
-    tittle: 'HEADER.CARDALOG',
+      {
+    tittle: 'Shopping - Type',
     showAsTab: false,
     separateRoute: false,
     menu: [
-      //  { menuValue: 'the entire', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      
-     
-     { menuValue: 'HEADER.PRODUCT',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'HEADER.MORNINGSHOT', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'HEADER.INGREDIENT', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'HEADER.INDIA_HUB', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'HEADER.NEPAL_HUB', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Skincare',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Cleansine',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Mask Pack',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Base Mackeup',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Other',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+    ]
+  },
+    // {
+    // tittle: 'HEADER.SHOPPING',
+    //   showAsTab: false,
+    //   separateRoute: true,
+    //   hasSubRoute: false,
+    //   showSubRoute: false,
+    //     },
+
+  // {
+  //   tittle: 'HEADER.CARDALOG',
+  //   showAsTab: false,
+  //   separateRoute: false,
+  //   menu: [
+  //    { menuValue: 'HEADER.PRODUCT',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //     { menuValue: 'HEADER.MORNINGSHOT', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //     { menuValue: 'HEADER.INGREDIENT', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //     { menuValue: 'HEADER.INDIA_HUB', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+  //     { menuValue: 'HEADER.NEPAL_HUB', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+    
+  //   ]
+  // },
+    {
+    tittle: 'Shopping - Function',
+    showAsTab: false,
+    separateRoute: false,
+    menu: [
+     { menuValue: 'Moisture / Hydration',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Sensitive', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Tone Up', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Pores / Firmness', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'Sebum', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      { menuValue: 'UV care', hasSubRoute: false, showSubRoute: false, subMenus: [], },
     
     ]
   },
 
+//   {
+//   tittle: 'HEADER.CUSTOMER_CENTER',
+//   showAsTab: false,
+//   separateRoute: false,
+//   menu: [
+//     {
+//       menuValue: 'HEADER.AFFILIATE_INQUIRY', routes: routes.AffiliateInquiry, hasSubRoute: false, showSubRoute: false, subMenus: [],
+//     },
+//     {
+//       menuValue: 'HEADER.QNA', routes: routes.CeoGreeting, hasSubRoute: false, showSubRoute: false, subMenus: [],
+//     },
+//     {
+//       menuValue: 'HEADER.OEM_ODM_INQUIRIES', routes: routes.CeoGreeting, hasSubRoute: false, showSubRoute: false, subMenus: [],
+//     }
+//   ]
+// },
   {
-  tittle: 'HEADER.CUSTOMER_CENTER',
+  tittle: 'Shopping - Line',
   showAsTab: false,
   separateRoute: false,
   menu: [
-    {
-      menuValue: 'HEADER.AFFILIATE_INQUIRY',
-      routes: routes.AffiliateInquiry,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    },
-    {
-      menuValue: 'HEADER.QNA',
-      routes: routes.CeoGreeting,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    },
-    {
-      menuValue: 'HEADER.OEM_ODM_INQUIRIES',
-      routes: routes.CeoGreeting,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    }
+    { menuValue: 'CICA', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'Pro CICA', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'CICA Vital', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'CICA Reti-A', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'CICA Natureal', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'CICA Collagen', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'Reedles', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'PDRN+', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'AZ Care', hasSubRoute: false, showSubRoute: false, subMenus: [],},
   ]
 },
 
+// {
+//   tittle: 'HEADER.PUBLIC_RELATIONS_CENTER',
+//   showAsTab: false,
+//   separateRoute: false,
+//   menu: [
+//     {
+//       menuValue: 'HEADER.LOCHE_NEWS',
+//       routes: routes.LocheNews,
+//       hasSubRoute: false,
+//       showSubRoute: false,
+//       subMenus: [],
+//     },
+//     {
+//       menuValue: 'HEADER.LOCHE_COMMERCIAL',
+//       routes: routes.LocheNews,
+//       hasSubRoute: false,
+//       showSubRoute: false,
+//       subMenus: [],
+//     },
+//     {
+//       menuValue: 'HEADER.INTRO_PARTNER_COMPANIES',
+//       routes: routes.LocheNews,
+//       hasSubRoute: false,
+//       showSubRoute: false,
+//       subMenus: [],
+//     },
+//     {
+//       menuValue: 'HEADER.INTRO_CI',
+//       routes: routes.CeoGreeting,
+//       hasSubRoute: false,
+//       showSubRoute: false,
+//       subMenus: [],
+//     }
+//   ]
+// }
 {
-  tittle: 'HEADER.PUBLIC_RELATIONS_CENTER',
+  tittle: 'Notice & Member',
   showAsTab: false,
   separateRoute: false,
   menu: [
-    {
-      menuValue: 'HEADER.LOCHE_NEWS',
-      routes: routes.LocheNews,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    },
-    {
-      menuValue: 'HEADER.LOCHE_COMMERCIAL',
-      routes: routes.LocheNews,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    },
-    {
-      menuValue: 'HEADER.INTRO_PARTNER_COMPANIES',
-      routes: routes.LocheNews,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    },
-    {
-      menuValue: 'HEADER.INTRO_CI',
-      routes: routes.CeoGreeting,
-      hasSubRoute: false,
-      showSubRoute: false,
-      subMenus: [],
-    }
+    { menuValue: 'Notice', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'Review', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'Q&A', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'Questions', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    { menuValue: 'Notice', hasSubRoute: false, showSubRoute: false, subMenus: [],},
+    
   ]
 }
 
