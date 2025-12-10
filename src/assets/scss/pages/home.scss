@@ -439,7 +439,7 @@
     position: $__relative;
     background: $__white;
     border-radius: 6px;
-    border: 1px solid #ebebeb;
+    // border: 1px solid #ebebeb;
     @include margin-padding(0 0 24px 0, 15px);
         @include respond-below(custom991) {
             @include margin-padding(null, 15px);
@@ -776,12 +776,14 @@
             .btn-order {
                 @extend %display-flex-center;
                 @extend %justify-content-center;
-                background: $__primarycolorsecondry;
+                // background: $__primarycolorsecondry;
                 position: $__relative;
-                border-radius: 5px;
+                border-radius: 25px;
                 font-weight: $__medium;
-                font-size: $__font__size__16;
-                color: $__white;
+                color: $__dark__blues;
+                border: 1px solid $__dark__blues;
+                font-size: $__font__size__14;
+                // color: $__white;
                 text-align: $__center;
                 padding: 7px 10px;
                 width: 100%;
@@ -806,7 +808,7 @@
         transition: all 0.5s;
         .btn-order {
             background-color: $__dark__blues !important;
-            color: $__white;
+            color: $__white !important;
             border-radius: 5px;
         }    
         .img-count {

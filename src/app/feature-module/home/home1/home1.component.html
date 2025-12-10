@@ -1,39 +1,1360 @@
-<div id="mySlider" class="carousel slide" data-bs-ride="carousel">
-  
-  <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#mySlider" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+<section>
+  <div id="mySlider" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mySlider" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#mySlider" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#mySlider" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="assets/img/banner-section2/new-banner1.webp" class="d-block w-100" alt="Slide 1">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/img/banner-section2/new-banner2.webp" class="d-block w-100" alt="Slide 2">
+      </div>
+
+      <div class="carousel-item">
+        <img src="assets/img/banner-section2/new-banner3.webp" class="d-block w-100" alt="Slide 3">
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#mySlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
   </div>
+</section>
 
-  <!-- Slides -->
-  <div class="carousel-inner">
-    
-    <div class="carousel-item active">
-      <img src="assets/img/banner-section2/new-banner1.webp" class="d-block w-100" alt="Slide 1">
+
+<section class="py-5 best-seller-section">
+  <div class="container">
+    <div class="mb-3">
+      <div class="coltab-section-title align_left section-title txt_style_one" style="color: #006547;">Best Sellers
+      </div>
     </div>
 
-    <div class="carousel-item">
-      <img src="assets/img/banner-section2/new-banner2.webp" class="d-block w-100" alt="Slide 2">
+    <div class="d-flex">
+      <ul class="nav nav-pills best-tabs mb-4" id="pdrnTab" role="tablist">
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'best'" (click)="setTab('best')">
+            Best Sellers
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'Lidlshot'" (click)="setTab('Lidlshot')">
+            Reedle Shot
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'Glossis'" (click)="setTab('Glossis')">
+            Glossys
+          </button>
+        </li>
+
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" [class.active]="activeTab === 'PDRN'" (click)="setTab('PDRN')">
+            PDRN
+          </button>
+        </li>
+      </ul>
+
     </div>
 
-    <div class="carousel-item">
-      <img src="assets/img/banner-section2/new-banner3.webp" class="d-block w-100" alt="Slide 3">
+    <div *ngIf="activeTab === 'best'" id="best">
+      <div class="bike-feature-slider nav-center">
+        <owl-carousel-o [options]="bikefeatureOwlOptions">
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/Sirum.jpg" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Dewy Glow Hyaluronic Acid Serum</a>
+                    </h3>
+                    <P class="extra-detail">50 ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,080 </h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <!-- <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
+                            (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                            <i class="feather icon-heart"></i>
+                          </a> -->
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                  <!-- <div class="feature-text">
+                      <span class="bg-danger">Featured</span>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/toner.jpg" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Dewy Glow Hyaluronic Acid Toner</a>
+                    </h3>
+                    <P class="extra-detail">200 ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>128 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,420</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/cream.jpg" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Dewy Glow Hyaluronic Acid Soothing Cream</a>
+                    </h3>
+                    <P class="extra-detail">100ml </P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,570</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/Redle-shot.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 100</a>
+                    </h3>
+                    <P class="extra-detail">50 ml </P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,482.28</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot-2(50).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Mild Reedle Shot 50</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,331.20</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot3-(300).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 300</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,797.74</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot4-(700).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 700</a>
+                    </h3>
+                    <P class="extra-detail">30ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,013.48</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+        </owl-carousel-o>
+      </div>
+      <!-- <div class="view-all-btn text-center aos" data-aos="fade-down">
+            <a class="btn btn-secondary">{{"HOME.VIEW_ALL" | translate}}</a>
+          </div> -->
     </div>
+    <div *ngIf="activeTab === 'Lidlshot'" id="Lidlshot">
+      <div class="bike-feature-slider nav-center">
+        <owl-carousel-o [options]="bikefeatureOwlOptions">
+
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/Redle-shot.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 100</a>
+                    </h3>
+                    <P class="extra-detail">50 ml </P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,482.28</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot-2(50).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Mild Reedle Shot 50</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,331.20</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot3-(300).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 300</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,797.74</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot4-(700).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 700</a>
+                    </h3>
+                    <P class="extra-detail">30ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,013.48</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div *ngIf="activeTab === 'Glossis'" id="Glossis">
+      <div class="bike-feature-slider nav-center">
+        <owl-carousel-o [options]="bikefeatureOwlOptions">
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/Sirum.jpg" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Dewy Glow Hyaluronic Acid Serum</a>
+                    </h3>
+                    <P class="extra-detail">50 ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,080 </h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <!-- <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
+                            (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
+                            <i class="feather icon-heart"></i>
+                          </a> -->
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                  <!-- <div class="feature-text">
+                      <span class="bg-danger">Featured</span>
+                    </div> -->
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/toner.jpg" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Dewy Glow Hyaluronic Acid Toner</a>
+                    </h3>
+                    <P class="extra-detail">200 ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>128 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,420</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/cream.jpg" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Dewy Glow Hyaluronic Acid Soothing Cream</a>
+                    </h3>
+                    <P class="extra-detail">100ml </P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,570</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/Redle-shot.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 100</a>
+                    </h3>
+                    <P class="extra-detail">50 ml </P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,482.28</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot-2(50).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Mild Reedle Shot 50</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,331.20</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot3-(300).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 300</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 1,797.74</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/reedle-shot4-(700).webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">Reedle Shot 700</a>
+                    </h3>
+                    <P class="extra-detail">30ml</P>
+                    <p class="extra-detail">Daily Booster</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,013.48</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div *ngIf="activeTab === 'PDRN'" id="PDRN">
+      <div class="bike-feature-slider nav-center">
+        <owl-carousel-o [options]="bikefeatureOwlOptions">
+
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/PDRN-1.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">PDRN Reedle Shot Hair Ampoule 300dl</a>
+                    </h3>
+                    <P class="extra-detail">15 ml </P>
+                    <p class="extra-detail">CICA REEDLE + Vegan PDRN</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 3,397.85</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/pdrn-2.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">PDRN Reedle Shot Hair Ampoule 100dl</a>
+                    </h3>
+                    <P class="extra-detail">50ml</P>
+                    <p class="extra-detail">Slow-aging Hair Ampoule Treatment</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 2,755.20</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/pdrn-3.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">PDRN Reedle Shot Hair Ampoule 700dl</a>
+                    </h3>
+                    <P class="extra-detail">15ml</P>
+                    <p class="extra-detail">Special PDRN Scalp Care</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 3,937.10</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="item">
+              <div class="listing-item bike-list">
+                <div class="listing-img">
+                  <div class="image-slider">
+                    <div class="slide-images">
+                      <a [routerLink]="routes.listingDetails">
+                        <img src="assets/img/product/pdrn-4.webp" class="img-fluid" alt="img" />
+                      </a>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="listing-content">
+
+                  <div class="listing-features align-items-center justify-content-between">
+                    <h3 class="listing-title">
+                      <a [routerLink]="routes.listingDetails">PDRN Hair Ampoule 300 Bundle</a>
+                    </h3>
+                    <P class="extra-detail">30ml</P>
+                    <p class="extra-detail">PDRN Reedle shot Hair Ampoule 300dl *2ea</p>
+                    <div class="list-rating">
+                      <div class="list-ratings">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star"></i>
+                        <span>138 {{"HOME.REVIEWS" | translate}}</span>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="listing-button">
+                    <div class="listing-price mb-2">
+                      <h6>₹ 5,662.65</h6>
+                    </div>
+                    <div class="d-flex align-items-center">
+                      <a [routerLink]="routes.listingDetails" class="btn btn-order"><i
+                          class="fa-solid fa-bag-shopping me-2"></i> {{"HOME.BOOK_NOW" |
+                        translate}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+
+        </owl-carousel-o>
+      </div>
+    </div>
+
 
   </div>
+</section>
 
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#mySlider" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
+<section class="py-5 review-section" style="background-color: #f3f9f6;">
+  <div class="container">
+    <div class="mb-3">
+      <div class="coltab-section-title align_left section-title txt_style_one" style="color: #006547;">Real Reviews
+      </div>
+    </div>
+    <div class="bike-feature-slider nav-center">
+      <owl-carousel-o [options]="secondsection">
+        <ng-template carouselSlide>
+          <div class="item video-review">
 
-  <button class="carousel-control-next" type="button" data-bs-target="#mySlider" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
+            <div class="video-wrap position-relative">
+              <video #videoElem class="w-100 rounded-4" playsinline preload="metadata" muted
+                (click)="toggleMute(videoElem)" poster="assets/img/video-poster.jpg">
+                <source src="assets/img/product/pdrn.mp4" type="video/mp4" />
+              </video>
 
-</div>
+              <button class="video-sound-btn" (click)="toggleMute(videoElem)" type="button">
+                <i class="bx" [ngClass]="videoElem.muted ? 'bx-volume-mute' : 'bx-volume-full'"></i>
+              </button>
+            </div>
+
+            <div class="video-product-info">
+              <div class="d-flex align-items-center">
+                <img src="assets/img/product/pdrn-2.webp" class="prod-thumb" alt="">
+                <div class="ms-3">
+                  <h4 class="prod-title">PDRN Reedle Shot Hair Ampoule 100dl</h4>
+                  <p class="prod-price">
+                    <span class="new">₹ 2,755.82</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+        <ng-template carouselSlide>
+          <div class="item video-review">
+
+            <div class="video-wrap position-relative">
+              <video #videoElem class="w-100 rounded-4" playsinline preload="metadata" muted
+                (click)="toggleMute(videoElem)" poster="assets/img/video-poster.jpg">
+                <source src="assets/img/product/pdrn3.mp4" type="video/mp4" />
+              </video>
+
+              <button class="video-sound-btn" (click)="toggleMute(videoElem)" type="button">
+                <i class="bx" [ngClass]="videoElem.muted ? 'bx-volume-mute' : 'bx-volume-full'"></i>
+              </button>
+            </div>
+
+            <div class="video-product-info">
+              <div class="d-flex align-items-center">
+                <img src="assets/img/product/pdrn-2.webp" class="prod-thumb" alt="">
+                <div class="ms-3">
+                  <h4 class="prod-title">PDRN Essence 100</h4>
+                  <p class="prod-price">
+                    <span class="new">₹3,146.05</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <div class="item video-review">
+
+            <div class="video-wrap position-relative">
+              <video #videoElem class="w-100 rounded-4" playsinline preload="metadata" muted
+                (click)="toggleMute(videoElem)" poster="assets/img/video-poster.jpg">
+                <source src="assets/img/product/pdrn-700.mp4" type="video/mp4" />
+              </video>
+
+              <button class="video-sound-btn" (click)="toggleMute(videoElem)" type="button">
+                <i class="bx" [ngClass]="videoElem.muted ? 'bx-volume-mute' : 'bx-volume-full'"></i>
+              </button>
+            </div>
+
+            <div class="video-product-info">
+              <div class="d-flex align-items-center">
+                <img src="assets/img/product/pdrn-2.webp" class="prod-thumb" alt="">
+                <div class="ms-3">
+                  <h4 class="prod-title">Reedle Shot 700</h4>
+                  <p class="prod-price">
+                    <span class="new">₹32,013.88</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+
+         <ng-template carouselSlide>
+          <div class="item video-review">
+
+            <div class="video-wrap position-relative">
+              <video #videoElem class="w-100 rounded-4" playsinline preload="metadata" muted
+                (click)="toggleMute(videoElem)" poster="assets/img/video-poster.jpg">
+                <source src="assets/img/product/pdrn-stick.mp4" type="video/mp4" />
+              </video>
+
+              <button class="video-sound-btn" (click)="toggleMute(videoElem)" type="button">
+                <i class="bx" [ngClass]="videoElem.muted ? 'bx-volume-mute' : 'bx-volume-full'"></i>
+              </button>
+            </div>
+
+            <div class="video-product-info">
+              <div class="d-flex align-items-center">
+                <img src="assets/img/product/pdrn-2.webp" class="prod-thumb" alt="">
+                <div class="ms-3">
+                  <h4 class="prod-title">PDRN STICK BALM</h4>
+                  <p class="prod-price">
+                    <span class="new">₹ 1,140.10</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+
+        <ng-template carouselSlide>
+          <div class="item video-review">
+
+            <div class="video-wrap position-relative">
+              <video #videoElem class="w-100 rounded-4" playsinline preload="metadata" muted
+                (click)="toggleMute(videoElem)" poster="assets/img/video-poster.jpg">
+                <source src="assets/img/product/pdrn-video.mp4" type="video/mp4" />
+              </video>
+
+              <button class="video-sound-btn" (click)="toggleMute(videoElem)" type="button">
+                <i class="bx" [ngClass]="videoElem.muted ? 'bx-volume-mute' : 'bx-volume-full'"></i>
+              </button>
+            </div>
+
+            <div class="video-product-info">
+              <div class="d-flex align-items-center">
+                <img src="assets/img/product/pdrn-2.webp" class="prod-thumb" alt="">
+                <div class="ms-3">
+                  <h4 class="prod-title">PDRN GLOW AMPOULE</h4>
+                  <p class="prod-price">
+                    <span class="new">₹ 1,165.23</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </ng-template>
+
+      </owl-carousel-o>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -43,7 +1364,7 @@
   <div class="section-header-two">
     <h2>{{"HOME.OUR_BEST_SELECTION" | translate}}</h2>
     <p>{{"HOME.EXPLORE" | translate}}
-     
+
     </p>
   </div>
   <div class="row yacht-category-lists">
@@ -51,51 +1372,48 @@
       <div class="yacht-cat-grid">
         <div class="yatch-card-img">
           <!-- <a [routerLink]="routes.listingGrid"> -->
-             <a >
-            <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid"
-              alt="product" /></a>
+          <a>
+            <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid" alt="product" /></a>
         </div>
         <div class="card-content d-flex align-items-center justify-content-between">
           <div>
             <h4><a [routerLink]="routes.listingGrid">{{"HOME.HANGOVER" | translate}}</a></h4>
             <span>3 {{"HOME.PRODUCTS" | translate}} </span>
           </div>
-          <a  class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
+          <a class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
         </div>
       </div>
     </div>
     <div class="custom-col">
       <div class="yacht-cat-grid">
         <div class="yatch-card-img">
-          <a >
-            <img src="assets/img/banners/hangover2.jpeg" class="img-fluid"
-              alt="Sleep" /></a>
+          <a>
+            <img src="assets/img/banners/hangover2.jpeg" class="img-fluid" alt="Sleep" /></a>
         </div>
         <div class="card-content d-flex align-items-center justify-content-between">
           <div>
-            <h4><a >{{"HOME.SLEEP" | translate}}</a></h4>
+            <h4><a>{{"HOME.SLEEP" | translate}}</a></h4>
             <span>2 {{"HOME.PRODUCTS" | translate}}</span>
           </div>
-          <a  class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
+          <a class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
         </div>
       </div>
     </div>
     <div class="custom-col">
       <div class="yacht-cat-grid">
         <div class="yatch-card-img">
-          <a ><img src="assets/img/banners/kid-product.png" class="img-fluid"
-              alt="yacht" /></a>
+          <a><img src="assets/img/banners/kid-product.png" class="img-fluid" alt="yacht" /></a>
         </div>
         <div class="card-content d-flex align-items-center justify-content-between">
           <div>
-            <h4><a >{{"HOME.HANGOVER_KITS" | translate}}</a></h4>
+            <h4><a>{{"HOME.HANGOVER_KITS" | translate}}</a></h4>
             <span>4 {{"HOME.PRODUCTS" | translate}}</span>
           </div>
-          <a  class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
+          <a class="arrow-right"><i class="bx bx-right-arrow-alt"></i></a>
         </div>
       </div>
     </div>
- <div class="col-md-12">
+    <div class="col-md-12">
       <div class="view-more-btn text-center">
         <a class="btn btn-secondary">{{"HOME.VIEW_MORE" | translate}}</a>
       </div>
@@ -147,7 +1465,7 @@
           <div class="col-lg-6">
             <h2 class="section-title">{{"HOME.RESTFULL" | translate}} </h2>
             <p class="section-text">{{"HOME.RESTFULL_DESC" | translate}}
-            
+
             </p>
             <div class="view-more-btn mt-3">
               <a class="btn btn-secondary">{{"HOME.LEARN_MORE" | translate}}</a>
@@ -162,13 +1480,6 @@
       <div class="tab-pane fade show active" id="hangover" role="tabpanel">
 
         <div class="row align-items-center g-5">
-
-          <!-- Left Image -->
-          <!-- <div class="col-lg-6">
-            <div class="image-wrapper shadow-lg rounded-4 overflow-hidden">
-              <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid w-100" alt="Hangover">
-            </div>
-          </div> -->
           <div class="col-lg-7">
             <div class="hangover-collage">
 
@@ -187,9 +1498,9 @@
             <h2 class="section-title ps-4">{{"HOME.HANGOVER_RELIEF" | translate}}</h2>
             <p class="section-text ps-4">
               {{"HOME.HANGOVER_RELIEF_DESC" | translate}}
-             
+
             </p>
-            <div  class="view-more-btn mt-3 ms-3">
+            <div class="view-more-btn mt-3 ms-3">
               <a class="btn btn-secondary">{{"HOME.LEARN_MORE" | translate}}</a>
             </div>
           </div>
@@ -205,230 +1516,7 @@
 <!-- product section -->
 <section class="section features-section">
   <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <!-- Heading title-->
-        <div class="section-heading heading-three mx-auto" data-aos="fade-down">
-          <h2 class="d-flex justify-content-center">{{"HOME.MOST_LOVING" | translate}}</h2>
 
-        </div>
-        <!-- /Heading title -->
-        <div class="bike-feature-slider nav-center">
-          <owl-carousel-o [options]="bikefeatureOwlOptions">
-            <ng-template carouselSlide>
-              <div class="item">
-                <div class="listing-item bike-list">
-                  <div class="listing-img">
-                    <div class="image-slider">
-                      <div class="slide-images">
-                        <a [routerLink]="routes.listingDetails">
-                          <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid" alt="img" />
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="listing-content">
-                    
-                    <div class="listing-features align-items-center justify-content-between">
-                                              <h3 class="listing-title">
-                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNINGSHOT" | translate}}</a>
-                        </h3>
-                      <div class="list-rating">
-                        <div class="list-ratings">
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star"></i>
-                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="listing-button">
-                      <div class="listing-price mb-2">
-                        <h6>₹ 1600 </h6>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
-                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
-                          <i class="feather icon-heart"></i>
-                        </a>
-                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
-                      </div>
-                    </div>
-                    <!-- <div class="feature-text">
-                      <span class="bg-danger">Featured</span>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="item">
-                <div class="listing-item bike-list">
-                  <div class="listing-img">
-                    <div class="image-slider">
-                      <div class="slide-images">
-                        <a [routerLink]="routes.listingDetails">
-                          <img src="assets/img/banners/hangover2.jpeg" class="img-fluid" alt="img" />
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="listing-content">
-                    
-                    <div class="listing-features align-items-center justify-content-between">
-                                              <h3 class="listing-title">
-                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNING_GRAPE" | translate}}</a>
-                        </h3>
-                      <div class="list-rating">
-                        <div class="list-ratings">
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star"></i>
-                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="listing-button">
-                      <div class="listing-price mb-2">
-                        <h6>₹ 2600 </h6>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
-                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
-                          <i class="feather icon-heart"></i>
-                        </a>
-                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
-                      </div>
-                    </div>
-                    <!-- <div class="feature-text">
-                      <span class="bg-danger">Featured</span>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="item">
-                <div class="listing-item bike-list">
-                  <div class="listing-img">
-                    <div class="image-slider">
-                      <div class="slide-images">
-                        <a [routerLink]="routes.listingDetails">
-                          <img src="assets/img/banners/hangover3.jpeg" class="img-fluid" alt="img" />
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="listing-content">
-                    
-                    <div class="listing-features align-items-center justify-content-between">
-                                              <h3 class="listing-title">
-                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNINGSHOT" | translate}}</a>
-                        </h3>
-                      <div class="list-rating">
-                        <div class="list-ratings">
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star"></i>
-                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="listing-button">
-                      <div class="listing-price mb-2">
-                        <h6>₹ 1600 </h6>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
-                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
-                          <i class="feather icon-heart"></i>
-                        </a>
-                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
-                      </div>
-                    </div>
-                    <!-- <div class="feature-text">
-                      <span class="bg-danger">Featured</span>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-            <ng-template carouselSlide>
-              <div class="item">
-                <div class="listing-item bike-list">
-                  <div class="listing-img">
-                    <div class="image-slider">
-                      <div class="slide-images">
-                        <a [routerLink]="routes.listingDetails">
-                          <img src="assets/img/banners/hangoverimg.jpeg" class="img-fluid" alt="img" />
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="listing-content">
-                    
-                    <div class="listing-features align-items-center justify-content-between">
-                                              <h3 class="listing-title">
-                          <a [routerLink]="routes.listingDetails">{{"HOME.MORNINGSHOT" | translate}}</a>
-                        </h3>
-                      <div class="list-rating">
-                        <div class="list-ratings">
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star filled"></i>
-                          <i class="fas fa-star"></i>
-                          <span>138 {{"HOME.REVIEWS" | translate}}</span>
-                        </div>
-
-                      </div>
-                    </div>
-
-                    <div class="listing-button">
-                      <div class="listing-price mb-2">
-                        <h6>₹ 1600 </h6>
-                      </div>
-                      <div class="d-flex align-items-center">
-                        <a href="javascript:void(0)" class="fav-icon" (click)="toggleClass(0)"
-                          (keydown)="toggleClass(0)" tabindex="1" [ngClass]="{ selected: isClassAdded[0] }">
-                          <i class="feather icon-heart"></i>
-                        </a>
-                        <a [routerLink]="routes.listingDetails" class="btn btn-order">{{"HOME.BOOK_NOW" | translate}}</a>
-                      </div>
-                    </div>
-                    <!-- <div class="feature-text">
-                      <span class="bg-danger">Featured</span>
-                    </div> -->
-                  </div>
-                </div>
-              </div>
-            </ng-template>
-
-          </owl-carousel-o>
-        </div>
-
-        <div class="view-all-btn text-center aos" data-aos="fade-down">
-          <a  class="btn btn-secondary">{{"HOME.VIEW_ALL" | translate}}</a>
-          <!-- [routerLink]="routes.listingGrid" -->
-        </div>
-      </div>
-    </div>
   </div>
   <div class="feature-bg">
     <img src="assets/img/bg/destination-bg-01.png" class="img-fluid shape-01" alt="img" />
@@ -436,8 +1524,8 @@
   </div>
 </section>
 <!-- end product section -->
- <!-- Benefits section  -->
-<section class="renting-yacht-sec"> 
+<!-- Benefits section  -->
+<section class="renting-yacht-sec">
   <div class="sec-round-colors">
     <span class="bg-orange round-small"></span>
     <span class="bg-orange round-small"></span>
@@ -464,7 +1552,7 @@
             <h5>{{"HOME.FAST" | translate}}</h5>
             <p>
               {{"HOME.FAST_DESC" | translate}}
-              
+
             </p>
           </div>
         </li>
@@ -473,7 +1561,7 @@
           <div class="benifit-contents">
             <h5>{{"HOME.POWER" | translate}}</h5>
             <p>{{"HOME.POWER_DESC" | translate}}
-            
+
             </p>
           </div>
         </li>
@@ -483,7 +1571,7 @@
             <h5>{{"HOME.GENTAL" | translate}}</h5>
             <p>
               {{"HOME.GENTAL_DESC" | translate}}
-            
+
             </p>
           </div>
         </li>
@@ -499,7 +1587,7 @@
             <h5>{{"HOME.SUPPORT" | translate}}</h5>
             <p>
               {{"HOME.SUPPORT_DESC" | translate}}
-            
+
             </p>
           </div>
         </li>
@@ -509,7 +1597,7 @@
             <h5>{{"HOME.BACKED" | translate}}</h5>
             <p>
               {{"HOME.BACKED_DESC" | translate}}
-              
+
             </p>
           </div>
         </li>
@@ -519,7 +1607,7 @@
             <h5>{{"HOME.USE" | translate}}</h5>
             <p>
               {{"HOME.USE_DESC" | translate}}
-            
+
             </p>
           </div>
         </li>
@@ -543,43 +1631,7 @@
       </button>
     </div>
 
-    <!-- TAB CONTENT -->
-    <div class="tab-content">
 
-      <!-- HANGOVER FAQ -->
-     <div *ngIf="activeTab === 'hangover'">
-  <div *ngFor="let h of hangoverFAQ; let i = index" class="ms-faq-card">
-
-    <div class="question" (click)="toggle(i, 'hang')">
-      {{ h.q | translate }}
-      <span class="icon" [class.open]="openedHang === i">▼</span>
-    </div>
-
-    <div class="answer" *ngIf="openedHang === i">
-      {{ h.a | translate }}
-    </div>
-
-  </div>
-</div>
-
-
-      <!-- SLEEP FAQ -->
-      <div *ngIf="activeTab === 'sleep'">
-        <div *ngFor="let s of sleepFAQ; let j = index" class="ms-faq-card">
-
-          <div class="question" (click)="toggle(j, 'sleep')">
-            {{ s.q | translate}}
-            <span class="icon" [class.open]="openedSleep === j">▼</span>
-          </div>
-
-          <div class="answer" *ngIf="openedSleep === j">
-            {{ s.a | translate}}
-          </div>
-
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 

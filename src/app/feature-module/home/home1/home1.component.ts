@@ -1,11 +1,12 @@
 import { DatePipe } from '@angular/common';
-import { AfterViewInit, Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { routes } from 'src/app/shared/routes/routes';
 import { CommonService } from 'src/app/shared/services/common/common.service';
 import { DataService } from 'src/app/shared/services/data/data.service';
-import {  testimonials, thumbnails1 } from 'src/app/shared/services/model/model';
+import { testimonials, thumbnails1 } from 'src/app/shared/services/model/model';
+
 interface data {
   value: string;
 }
@@ -15,420 +16,148 @@ interface data {
   templateUrl: './home1.component.html',
   styleUrls: ['./home1.component.css'],
 })
-export class HomeComponent implements AfterViewInit{
-  activeTab: string = 'hangover';
+export class HomeComponent implements AfterViewInit {
 
-  openedHang: number | null = null;
-  openedSleep: number | null = null;
+  activeTab: string = 'best';
 
-  toggle(i: number, type: string) {
-    if (type === 'hang') {
-      this.openedHang = this.openedHang === i ? null : i;
-    } else {
-      this.openedSleep = this.openedSleep === i ? null : i;
-    }
+  setTab(tab: string) {
+    this.activeTab = tab;
   }
 
-hangoverFAQ = [
-  { q: "HOME.FAQ_QA.Q1", a: "HOME.FAQ_QA.A1" },
-  { q: "HOME.FAQ_QA.Q2", a: "HOME.FAQ_QA.A2" },
-  { q: "HOME.FAQ_QA.Q3", a: "HOME.FAQ_QA.A3" },
-  { q: "HOME.FAQ_QA.Q4", a: "HOME.FAQ_QA.A4" },
-  { q: "HOME.FAQ_QA.Q5", a: "HOME.FAQ_QA.A5" },
-  { q: "HOME.FAQ_QA.Q6", a: "HOME.FAQ_QA.A6" },
-  { q: "HOME.FAQ_QA.Q7", a: "HOME.FAQ_QA.A7" }
-];
+  /* ---------------- VIDEO CONTROL ---------------- */
+ @ViewChildren('videoElem') allVideos!: QueryList<ElementRef<HTMLVideoElement>>;
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.allVideos.forEach(v => {
+        v.nativeElement.muted = true;
+        v.nativeElement.play().catch(() => {});
+      });
+    }, 300);
+  }
+
+  toggleMute(video: HTMLVideoElement) {
+    video.muted = !video.muted;
+    video.play().catch(() => {});
+  }
 
 
-sleepFAQ = [
-  { q: "HOME.SLEEP_QA.Q1", a: "HOME.SLEEP_QA.A1" },
-  { q: "HOME.SLEEP_QA.Q2", a: "HOME.SLEEP_QA.A2" },
-  { q: "HOME.SLEEP_QA.Q3", a: "HOME.SLEEP_QA.A3" },
-  { q: "HOME.SLEEP_QA.Q4", a: "HOME.SLEEP_QA.A4" },
-  { q: "HOME.SLEEP_QA.Q5", a: "HOME.SLEEP_QA.A5" },
-  { q: "HOME.SLEEP_QA.Q6", a: "HOME.SLEEP_QA.A6" },
-  { q: "HOME.SLEEP_QA.Q7", a: "HOME.SLEEP_QA.A7" }
-];
 
-public routes = routes
+  /* ---------------- FAQ DATA ---------------- */
+  hangoverFAQ = [
+    { q: "HOME.FAQ_QA.Q1", a: "HOME.FAQ_QA.A1" },
+    { q: "HOME.FAQ_QA.Q2", a: "HOME.FAQ_QA.A2" },
+    { q: "HOME.FAQ_QA.Q3", a: "HOME.FAQ_QA.A3" },
+    { q: "HOME.FAQ_QA.Q4", a: "HOME.FAQ_QA.A4" },
+    { q: "HOME.FAQ_QA.Q5", a: "HOME.FAQ_QA.A5" },
+    { q: "HOME.FAQ_QA.Q6", a: "HOME.FAQ_QA.A6" },
+    { q: "HOME.FAQ_QA.Q7", a: "HOME.FAQ_QA.A7" }
+  ];
+
+  sleepFAQ = [
+    { q: "HOME.SLEEP_QA.Q1", a: "HOME.SLEEP_QA.A1" },
+    { q: "HOME.SLEEP_QA.Q2", a: "HOME.SLEEP_QA.A2" },
+    { q: "HOME.SLEEP_QA.Q3", a: "HOME.SLEEP_QA.A3" },
+    { q: "HOME.SLEEP_QA.Q4", a: "HOME.SLEEP_QA.A4" },
+    { q: "HOME.SLEEP_QA.Q5", a: "HOME.SLEEP_QA.A5" },
+    { q: "HOME.SLEEP_QA.Q6", a: "HOME.SLEEP_QA.A6" },
+    { q: "HOME.SLEEP_QA.Q7", a: "HOME.SLEEP_QA.A7" }
+  ];
+
+  public routes = routes;
   public thumbnails1: thumbnails1[] = [];
   public testimonials: testimonials[] = [];
- 
+
   constructor(private data: DataService, private datePipe: DatePipe) {
     this.testimonials = this.data.testimonials;
     this.thumbnails1 = this.data.thumbnails1;
-    
-    
   }
+
   contactNow() {
     alert('Contact form or chat popup triggered!');
   }
 
-
-
+  /* ---------------- PRODUCT LIST ---------------- */
   newArrivalProducts = [
-  {
-    image: 'assets/img/product/fab-you1.webp',
-    title: 'Retinol Peptide Youthful Serum',
-    brandname:'febyou',
-    price: 1596,
-    oldPrice: null,
-    discount: null
-  },
-  {
-    image: 'assets/img/product/product-2.avif',
-    title: 'Plum Simply Bright 2% Niacinamide Face Wash With',
-    brandname:'Plum',
-    price: 299,
-    oldPrice: null,
-    discount: null,
-  },
-  {
-    image: 'assets/img/product/fab-you2.webp',
-    title: 'Rice Glow Foam Toner',
-    brandname:'febyou',
-    price: 1191,
-    oldPrice: null,
-    discount: null,
-  },
-  {
-    image: 'assets/img/product/fab-you3.webp',
-    title: 'KRice Mask Cleanser',
-    brandname:'febyou',
-    price: 1407,
-    oldPrice: null,
-    discount: null,
-  },
-  {
-    image: 'assets/img/product/ratplan-6.jpg',
-    title: 'Donghae Deep Moisturizing Cream 1+1',
-    brandname:'Ratiplan',
-    price: 2000,
-    oldPrice: null,
-    discount: null,
-  }
-];
+    {
+      image: 'assets/img/product/fab-you1.webp',
+      title: 'Retinol Peptide Youthful Serum',
+      brandname: 'febyou',
+      price: 1596
+    },
+    {
+      image: 'assets/img/product/product-2.avif',
+      title: 'Plum Simply Bright 2% Niacinamide Face Wash With',
+      brandname: 'Plum',
+      price: 299
+    },
+    {
+      image: 'assets/img/product/fab-you2.webp',
+      title: 'Rice Glow Foam Toner',
+      brandname: 'febyou',
+      price: 1191
+    },
+    {
+      image: 'assets/img/product/fab-you3.webp',
+      title: 'KRice Mask Cleanser',
+      brandname: 'febyou',
+      price: 1407
+    },
+    {
+      image: 'assets/img/product/ratplan-6.jpg',
+      title: 'Donghae Deep Moisturizing Cream 1+1',
+      brandname: 'Ratiplan',
+      price: 2000
+    }
+  ];
 
+  promotionProducts = [
+    { image: 'assets/img/banners/Loche Tox 100Unit.jpg', title: 'HOME.PROMO.LOCHE_TOX_100' },
+    { image: 'assets/img/banners/Loche Tox 200Unit.jpg', title: 'HOME.PROMO.LOCHE_TOX_200' },
+    { image: 'assets/img/banners/PDRNelle.jpg', title: 'HOME.PROMO.PDRNELLE' },
+    { image: 'assets/img/banners/IMG-20251025-WA0033.jpg', title: 'HOME.PROMO.PDRNELLE_SKINBOOSTER' },
+    { image: 'assets/img/banners/Loche injector .jpg', title: 'HOME.PROMO.LOCHE_INJECTOR' },
+    { image: 'assets/img/banners/Pdrnelle vega shine.jpg', title: 'HOME.PROMO.PDRNELLE_VEGA_SHINE' },
+    { image: 'assets/img/banners/pdrnelle V .jpg', title: 'HOME.PROMO.PDRNELLE_V' }
+  ];
 
-promotionProducts = [
-  {
-    image: 'assets/img/banners/Loche Tox 100Unit.jpg',
-    title: 'HOME.PROMO.LOCHE_TOX_100',
-  },
-  {
-    image: 'assets/img/banners/Loche Tox 200Unit.jpg',
-    title: 'HOME.PROMO.LOCHE_TOX_200',
-  },
-  {
-    image: 'assets/img/banners/PDRNelle.jpg',
-    title: 'HOME.PROMO.PDRNELLE',
-  },
-  {
-    image: 'assets/img/banners/IMG-20251025-WA0033.jpg',
-    title: 'HOME.PROMO.PDRNELLE_SKINBOOSTER',
-  },
-  {
-    image: 'assets/img/banners/Loche injector .jpg',
-    title: 'HOME.PROMO.LOCHE_INJECTOR',
-  },
-  {
-    image: 'assets/img/banners/Pdrnelle vega shine.jpg',
-    title: 'HOME.PROMO.PDRNELLE_VEGA_SHINE',
-  },
-  {
-    image: 'assets/img/banners/pdrnelle V .jpg',
-    title: 'HOME.PROMO.PDRNELLE_V',
-  },
-];
-
-
+  /* ---------------- SLIDER OPTIONS ---------------- */
   secondsection: OwlOptions = {
-    loop:true,
-    margin:15,
-    nav:true,
+    loop: true,
+    margin: 15,
+    nav: true,
     dots: false,
-    autoplay:true,
+    autoplay: false,
     smartSpeed: 1000,
-    items:1,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:1
-      },
-      
-      550:{
-        items:2
-      },
-      700:{
-        items:3
-      },
-      1000:{
-        items:3
-      },
-      1200:{
-        items:3
-      },
-
-    },
-  };
-    bikefeatureOwlOptions: OwlOptions = {
-    loop:true,
-    margin:15,
-    nav:true,
-    dots: false,
-    autoplay:false,
-    smartSpeed: 2000,
-    items:1,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:2
-      },
-      
-      550:{
-        items:2
-      },
-      700:{
-        items:2
-      },
-      1000:{
-        items:3
-      },
-      1400:{
-        items:4
-      }
-    },
-  };
-    carimagesliderOwlOptions: OwlOptions = {
-    loop:true,
-    margin:24,
-    nav:true,
-    dots: true,
-    autoplay:false,
-    smartSpeed: 2000,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:1
-      },
-      
-      550:{
-        items:1
-      },
-      700:{
-        items:2
-      },
-      1000:{
-        items:6
-      },
-      1200:{
-        items:6
-      }
+    items: 1,
+    navText: ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"],
+    responsive: {
+      0: { items: 1 },
+      550: { items: 2 },
+      700: { items: 3 },
+      1000: { items: 4 }
     }
   };
-  firstsecOptions: OwlOptions = {
-    loop:true,
-    margin:20,
-    nav:true,
-    dots: false,
-    autoplay:false,
-    smartSpeed: 2000,
-    items:1,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:3
-      },
-      550:{
-        items:4
-      },
-      700:{
-        items:5
-      },
-      1000:{
-        items:6
-      },
-      1200:{
-        items:7
-      },
 
-    },
-  };
-  categorysec: OwlOptions = {
-    loop:true,
-    margin:24,
-    nav:true,
+  bikefeatureOwlOptions: OwlOptions = {
+    loop: true,
+    margin: 2,
+    nav: true,
     dots: false,
-    autoplay:false,
+    autoplay: false,
     smartSpeed: 2000,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:2
-      },
-      
-      550:{
-        items:3
-      },
-      700:{
-        items:4
-      },
-      1000:{
-        items:5
-      },
-      1200:{
-        items:5
-      }
+    items: 1,
+    navText: ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"],
+    responsive: {
+      0: { items: 2 },
+      550: { items: 2 },
+      700: { items: 3 },
+      1000: { items: 4 }
     }
   };
-    yachttypeOwlOptions: OwlOptions = {
-    loop:true,
-			margin:24,
-			nav:false,
-			dots: false,
-			autoplay:true,
-			smartSpeed: 2000,
-      responsive:{
-				0:{
-					items:2
-				},
-				
-				550:{
-					items:3
-				},
-				1200:{
-					items:4
-				},
-				1400:{
-					items:10
-				}
-			}
-  };
-  BrandsliderOwlOptions: OwlOptions = {
-    loop:true,
-    margin:10,
-    nav:false,
-    dots: false,
-    autoplay:false,
-    smartSpeed: 2000,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:2
-      },
-      
-      550:{
-        items:3
-      },
-      700:{
-        items:4
-      },
-      1000:{
-        items:7
-      },
-      1200:{
-        items:7
-      }
-    }
-  };
-  TopBrands: OwlOptions = {
-   loop:true,
-    margin:20,
-    nav:true,
-    dots: false,
-    autoplay:false,
-    smartSpeed: 2000,
-    items:1,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:2
-      },
-      
-      550:{
-        items:2
-      },
-      700:{
-         items:3
-      },
-      1000:{
-        items:4
-      },
-      1200:{
-        items:5
-      },
-      1400:{
-        items:5
-      }
-    },
-  };
-    NewArrival: OwlOptions = {
-   loop:true,
-    margin:10,
-    nav:true,
-    dots: false,
-    autoplay:false,
-    smartSpeed: 2000,
-    items:1,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:2
-      },
-      
-      550:{
-        items:2
-      },
-      700:{
-         items:3
-      },
-      1000:{
-        items:4
-      },
-      1200:{
-        items:5
-      },
-      1400:{
-        items:5
-      }
-    },
-  };
-  
-  pramotionsec: OwlOptions = {
-   loop:true,
-    margin:10,
-    nav:true,
-    dots: false,
-    autoplay:false,
-    smartSpeed: 2000,
-    items:1,
-    navText : ["<i class='bx bx-chevron-left'></i>","<i class='bx bx-chevron-right'></i>"],
-    responsive:{
-      0:{
-        items:2
-      },
-      
-      550:{
-        items:2
-      },
-      700:{
-         items:3
-      },
-      1000:{
-        items:4
-      },
-      1200:{
-        items:5
-      },
-      1400:{
-        items:5
-      }
-    },
-  };
 
-  public ngAfterViewInit(): void{
-    window.dispatchEvent(new Event('resize'))
-  }
+  /* ---- Other sliders kept same to avoid breaking layout ---- */
+
   slideConfig = {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -445,8 +174,11 @@ promotionProducts = [
     asNavFor: '.testimonial-slider',
     focusOnSelect: true
   };
+
+  isClassAdded: boolean[] = [false];
+
   toggleClass(index: number) {
     this.isClassAdded[index] = !this.isClassAdded[index];
   }
-  public isClassAdded: boolean[] = [false];
+
 }

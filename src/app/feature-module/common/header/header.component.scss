@@ -16,9 +16,7 @@ $__whitecolor: #ffffff;
 .header-address li {
     font-size: 13px;
 }
-.navsection {
-    border-top: 0.5px solid gray;
-}
+
 a.nav-link.header-login.notification {
     background: #e4e4e4;
     /* padding: 10px 10px; */
@@ -34,6 +32,10 @@ a.nav-link.header-login.notification {
         display: flex;
         justify-content: space-between;
     }
+    .navsection {
+    border-top: 0.5px solid gray;
+    background: aliceblue;
+}
 
 }
 @media (max-width: 992px) {
