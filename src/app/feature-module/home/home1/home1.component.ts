@@ -155,6 +155,22 @@ export class HomeComponent implements AfterViewInit {
       1000: { items: 4 }
     }
   };
+  lineup: OwlOptions = {
+    loop: true,
+    margin: 10,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    smartSpeed: 2000,
+    items: 1,
+    navText: ["<i class='bx bx-chevron-left'></i>", "<i class='bx bx-chevron-right'></i>"],
+    responsive: {
+      0: { items: 2 },
+      550: { items: 2 },
+      700: { items: 3 },
+      1000: { items: 3 }
+    }
+  };
 
   /* ---- Other sliders kept same to avoid breaking layout ---- */
 
@@ -180,5 +196,54 @@ export class HomeComponent implements AfterViewInit {
   toggleClass(index: number) {
     this.isClassAdded[index] = !this.isClassAdded[index];
   }
+
+  // last section tabs 
+  activeSection = 'mission';
+
+tabs = [
+  { key: 'mission', label: 'Our Mission' },
+  { key: 'story', label: 'Reedle Shot Story' },
+  { key: 'cica', label: 'Cica Reedle™' }
+];
+
+contentData: any = {
+  mission: {
+    title: 'Our Mission',
+    text: [
+      'Skincare must go deeper than the surface – that is our belief at Loche Cosmetics.',
+      'We deliver an advanced skin-absorption experience powered by Korean innovation.',
+      'Our micro-needling essence uses ultra-safe spicules for gentle yet effective skin renewal.',
+      'With nano-liposome technology, ingredients break into micro-molecules for deeper delivery.',
+      'Our exosome extraction method ensures only the most potent actives reach your skin.'
+    ]
+  },
+
+  story: {
+    title: 'Reedle Shot Story',
+    text: [
+      'Loche Reedle Shot is inspired by premium Korean dermatology treatments.',
+      'Using natural micro-spicules, the formula awakens your skin’s regeneration cycle.',
+      'Each shot boosts absorption while stimulating fresh, healthy skin turnover.'
+    ]
+  },
+
+  cica: {
+    title: 'Cica Reedle™',
+    text: [
+      'Cica Reedle™ combines Centella Asiatica with micro-spicule delivery technology.',
+      'It calms irritation, repairs skin barriers, and penetrates deeper for long-lasting results.',
+      'Perfect for sensitive, acne-prone, and dull skin.'
+    ]
+  }
+};
+
+get activeContent() {
+  return this.contentData[this.activeSection]; // FIXED ✔
+}
+
+changeTab(tab: string) {
+  this.activeSection = tab;
+}
+
 
 }
