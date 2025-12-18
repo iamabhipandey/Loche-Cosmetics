@@ -89,6 +89,28 @@
     bottom: 0;
   }
 }
+@media (max-width: 767px) {
+  .best-tabs .nav-link {
+    background: #e8e7e7;
+    border-radius: 40px;
+    border: 0;
+    padding: 7px 11px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #4f4f4f;
+    transition: 0.3s ease;
+}
+.section-title{
+    font-size: 26px;
+    font-weight: 700;
+    color: #333;
+}
+.listing-item:hover .btn-order{
+    background-color: #e80071 !important;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+}
 
 /*----------------------------------- reviw section ------------------------------*/
 
