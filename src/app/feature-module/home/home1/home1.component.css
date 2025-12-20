@@ -211,3 +211,14 @@
 .tab-item:hover {
   opacity: 1;
 }
+
+.full-img-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.full-img-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
