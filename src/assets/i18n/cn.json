@@ -77,9 +77,55 @@
     "MORNINGSHOT": "晨间饮品",
     "INGREDIENT": "成分",
     "INDIA_HUB": "印度中心",
-    "NEPAL_HUB": "尼泊尔中心"
+    "NEPAL_HUB": "尼泊尔中心",
+    "MENU": {
+      "ABOUT_US": "关于我们",
+      "VT_STORY": "VT Story",
+      "VILLAGE_TOWN": "Village Town",
+      "VTS_THOUGHTS": "VTs Thoughts",
+      "REEDLES_UNIVERSE": "Reedles Universe",
+      "VT_AND_CICA": "VT and CICA",
+      "CICA_STORY": "CICA Story",
+      "CICA_LINE": "CICA Line",
+      "STORE": "商店",
+      "RETAIL_STORES": "零售店",
+      "SHOPPING": "购物",
+      "PRODUCT_LIST": "产品列表",
+      "BEST": "热销",
+      "NEW": "新品",
+      "COMPOSITION_SET": "组合套装",
+      "SALE": "特惠",
+      "ALL": "全部",
+      "SHOPPING_TYPE": "购物 - 按类型",
+      "SKINCARE": "护肤",
+      "CLEANSING": "清洁",
+      "MASK_PACK": "面膜",
+      "BASE_MAKEUP": "底妆",
+      "OTHER": "其他",
+      "SHOPPING_FUNCTION": "购物 - 按功能",
+      "MOISTURE_HYDRATION": "保湿 / 补水",
+      "SENSITIVE": "敏感肌",
+      "TONE_UP": "提亮",
+      "PORES_FIRMNESS": "毛孔 / 紧致",
+      "SEBUM": "控油",
+      "UV_CARE": "防晒",
+      "SHOPPING_LINE": "购物 - 按系列",
+      "CICA": "CICA",
+      "PRO_CICA": "Pro CICA",
+      "CICA_VITAL": "CICA Vital",
+      "CICA_RETI_A": "CICA Reti-A",
+      "CICA_NATURAL": "CICA Natureal",
+      "CICA_COLLAGEN": "CICA Collagen",
+      "REEDLES": "Reedles",
+      "PDRN_PLUS": "PDRN+",
+      "AZ_CARE": "AZ Care",
+      "NOTICE_MEMBER": "公告与会员",
+      "NOTICE": "公告",
+      "REVIEW": "评价",
+      "QNA": "问答",
+      "QUESTIONS": "咨询"
+    }
   },
-
   "FOOTER": {
     "BUSINESS_HOURS": "营业时间：周一至周六",
     "CUSTOMER_CARE": "客户服务",
@@ -228,7 +274,6 @@
     "MAN": "低维护",
     "MAN_DESC": "便捷的维护通道与模块化组件减少停机时间。"
   },
-  
   "HOME": {
     "NATURAL": "天然配方",
     "WAKE_UP": "清爽醒来",
@@ -271,7 +316,6 @@
     "USE_DESC": "便携好用，适合忙碌或外出的生活方式。",
     "FAQ": "解酒饮品常见问答",
     "AID_FAQ": "睡眠辅助常见问答",
-
     "FAQ_QA": {
       "Q1": "什么是 MorningShot 解酒饮品？",
       "A1": "一种阿育吠陀排毒饮品，有助于支持肝功能、增强水分补充，并让您在饮酒后清爽醒来。",
@@ -288,7 +332,6 @@
       "Q7": "是阿育吠陀并且无化学成分吗？",
       "A7": "是的，100% 阿育吠陀，不含有害化学物质，无成瘾性。"
     },
-
     "SLEEP_QA": {
       "Q1": "什么是 MorningShot 睡眠辅助？",
       "A1": "一种天然草本睡眠配方，帮助您更快入睡并获得深度修复性睡眠。",
@@ -304,7 +347,67 @@
       "A6": "可以，它是草本成分，适合每天使用。",
       "Q7": "可以与其他药物一起服用吗？",
       "A7": "一般来说是安全的，但如果您正在服用长期药物，请咨询医生。"
-    }
+    },
+    "BEST_SELLERS": "热销商品",
+    "REEDLE_SHOT": "微针精华",
+    "GLOSSYS": "光泽系列",
+    "PDRN": "PDRN",
+    "DAILY_BOOSTER": "日常强化剂",
+    "REEDLE_SHOT_100": "微针精华 100",
+    "MILD_REEDLE_SHOT_50": "温和微针精华 50",
+    "REEDLE_SHOT_300": "微针精华 300",
+    "REEDLE_SHOT_700": "微针精华 700",
+    "DEWY_GLOW_SERUM": "水润光泽玻尿酸精华",
+    "DEWY_GLOW_TONER": "水润光泽玻尿酸爽肤水",
+    "DEWY_GLOW_CREAM": "水润光泽玻尿酸舒缓霜",
+    "ML_50": "50 ml",
+    "ML_30": "30 ml",
+    "ML_200": "200 ml",
+    "ML_100": "100 ml",
+    "ML_15": "15 ml",
+    "CICA_REEDLE_VEGAN": "积雪草微针 + 纯素 PDRN",
+    "SLOW_AGING_HAIR": "抗衰老护发安瓶护理",
+    "SPECIAL_SCALP_CARE": "PDRN 特效头皮护理",
+    "HAIR_AMPOULE_BUNDLE": "PDRN 护发安瓶 300 套装",
+    "HAIR_AMPOULE_BUNDLE_DESC": "PDRN 微针护发安瓶 300dl *2支",
+    "REAL_REVIEWS": "真实评价",
+    "LOCHE_LINEUP": "Loche 系列",
+    "BRAND_TITLE": "Loche 化妆品",
+    "BRAND_SUBTITLE": "时尚与永恒",
+    "MISSION": {
+      "TITLE": "我们的使命",
+      "TEXT_1": "护肤必须深入表皮之下——这是 Loche Cosmetics 的信念。",
+      "TEXT_2": "我们提供源自韩国创新的先进皮肤吸收体验。",
+      "TEXT_3": "我们的微针精华使用超安全的海绵微针，温和而有效地促进皮肤更新。",
+      "TEXT_4": "利用纳米脂质体技术，成分分解为微分子，实现更深层输送。",
+      "TEXT_5": "我们的外泌体提取方法确保只有最强效的活性成分到达您的皮肤。"
+    },
+    "STORY": {
+      "TITLE": "微针精华的故事",
+      "TEXT_1": "Loche 微针精华的灵感来自高端韩国皮肤科治疗。",
+      "TEXT_2": "利用天然微针，该配方唤醒您皮肤的再生周期。",
+      "TEXT_3": "每一次使用都在促进吸收的同时，刺激新鲜健康的皮肤更新。"
+    },
+    "CICA": {
+      "TITLE": "积雪草微针™",
+      "TEXT_1": "积雪草微针™结合了积雪草与微针输送技术。",
+      "TEXT_2": "它能镇静刺激，修复皮肤屏障，并深入渗透以获得持久效果。",
+      "TEXT_3": "非常适合敏感、痘痘肌和暗沉肌肤。"
+    },
+    "TABS": {
+      "MISSION": "我们的使命",
+      "STORY": "微针精华的故事",
+      "CICA": "积雪草微针™"
+    },
+    "PDRN_HAIR_100": "PDRN 微针护发安瓶 100dl",
+    "PDRN_HAIR_300": "PDRN 微针护发安瓶 300dl",
+    "PDRN_HAIR_700": "PDRN 微针护发安瓶 700dl",
+    "PDRN_ESSENCE_100": "PDRN 精华 100",
+    "PDRN_STICK_BALM": "PDRN 棒状润唇膏",
+    "PDRN_CICA": "PDRN 积雪草",
+    "REEDLE_SHOT_UPPER": "微针精华",
+    "GLOSSYS_UPPER": "光泽系列",
+    "PDRN_UPPER": "PDRN",
+    "PDRN_CICA_UPPER": "PDRN 积雪草"
   }
-
 }

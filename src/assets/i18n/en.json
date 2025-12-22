@@ -74,7 +74,54 @@
     "MORNINGSHOT": "Morningshot",
     "INGREDIENT": "Ingredient",
     "INDIA_HUB": "India Hub",
-    "NEPAL_HUB": "Nepal Hub"
+    "NEPAL_HUB": "Nepal Hub",
+    "MENU": {
+      "ABOUT_US": "About Us",
+      "VT_STORY": "VT Story",
+      "VILLAGE_TOWN": "Village Town",
+      "VTS_THOUGHTS": "VTs Thoughts",
+      "REEDLES_UNIVERSE": "Reedles Universe",
+      "VT_AND_CICA": "VT and CICA",
+      "CICA_STORY": "CICA Story",
+      "CICA_LINE": "CICA Line",
+      "STORE": "Store",
+      "RETAIL_STORES": "Retail Stores",
+      "SHOPPING": "Shopping",
+      "PRODUCT_LIST": "Product List",
+      "BEST": "Best",
+      "NEW": "New",
+      "COMPOSITION_SET": "Composition set",
+      "SALE": "Sale",
+      "ALL": "All",
+      "SHOPPING_TYPE": "Shopping - Type",
+      "SKINCARE": "Skincare",
+      "CLEANSING": "Cleansine",
+      "MASK_PACK": "Mask Pack",
+      "BASE_MAKEUP": "Base Mackeup",
+      "OTHER": "Other",
+      "SHOPPING_FUNCTION": "Shopping - Function",
+      "MOISTURE_HYDRATION": "Moisture / Hydration",
+      "SENSITIVE": "Sensitive",
+      "TONE_UP": "Tone Up",
+      "PORES_FIRMNESS": "Pores / Firmness",
+      "SEBUM": "Sebum",
+      "UV_CARE": "UV care",
+      "SHOPPING_LINE": "Shopping - Line",
+      "CICA": "CICA",
+      "PRO_CICA": "Pro CICA",
+      "CICA_VITAL": "CICA Vital",
+      "CICA_RETI_A": "CICA Reti-A",
+      "CICA_NATURAL": "CICA Natureal",
+      "CICA_COLLAGEN": "CICA Collagen",
+      "REEDLES": "Reedles",
+      "PDRN_PLUS": "PDRN+",
+      "AZ_CARE": "AZ Care",
+      "NOTICE_MEMBER": "Notice & Member",
+      "NOTICE": "Notice",
+      "REVIEW": "Review",
+      "QNA": "Q&A",
+      "QUESTIONS": "Questions"
+    }
   },
   "FOOTER": {
     "BUSINESS_HOURS": "Business Hours:- Monday to Saturday",
@@ -325,54 +372,98 @@
     "USE_DESC": "Easy to carry and simple to use perfect for busy schedules and on-the-go lifestyles.",
     "FAQ": "Hangover Drinks FAQ",
     "AID_FAQ": "Sleep Aid FAQ",
-
-
-   "FAQ_QA": {
-  "Q1": "What is MorningShot Hangover Drink?",
-  "A1": "An Ayurvedic detox drink that supports liver function, boosts hydration, and helps you wake up fresh after drinking.",
-
-  "Q2": "How does it reduce hangovers?",
-  "A2": "Its herbal blend helps break down alcohol toxins faster, reducing headache, nausea, and fatigue the next day.",
-
-  "Q3": "When should I take it?",
-  "A3": "For best results, drink it after your last drink—before going to sleep.",
-
-  "Q4": "Can I take it before drinking?",
-  "A4": "Yes, it prepares the liver and helps reduce next-day discomfort.",
-
-  "Q5": "Is it safe for daily use?",
-  "A5": "Yes, it is made from natural Ayurvedic herbs and safe for regular use.",
-
-  "Q6": "How fast does it work?",
-  "A6": "You feel the difference the next morning with reduced tiredness and dehydration.",
-
-  "Q7": "Is it Ayurvedic and chemical-free?",
-  "A7": "Yes, it is 100% Ayurvedic, non-addictive, and free from harmful chemicals."
-},
-
-"SLEEP_QA": {
-  "Q1": "What is MorningShot Sleep Aid?",
-  "A1": "A natural herbal sleep formula that helps you fall asleep faster and enjoy deep, restorative sleep.",
-
-  "Q2": "Is it habit-forming?",
-  "A2": "No, it is 100% non-habit forming and safe for long-term use.",
-
-  "Q3": "How quickly does it work?",
-  "A3": "Typically within 20–30 minutes after consumption.",
-
-  "Q4": "Will I feel sleepy or heavy the next morning?",
-  "A4": "No, you wake up fresh and energised with no grogginess.",
-
-  "Q5": "Does it help reduce anxiety or overthinking?",
-  "A5": "Yes, calming herbs support relaxation and mental calmness.",
-
-  "Q6": "Can I take it every night?",
-  "A6": "Yes, it is herbal and suitable for nightly use.",
-
-  "Q7": "Is it safe with other medications?",
-  "A7": "Generally yes, but consult a doctor if you are on regular medication."
-}
-
-
+    "FAQ_QA": {
+      "Q1": "What is MorningShot Hangover Drink?",
+      "A1": "An Ayurvedic detox drink that supports liver function, boosts hydration, and helps you wake up fresh after drinking.",
+      "Q2": "How does it reduce hangovers?",
+      "A2": "Its herbal blend helps break down alcohol toxins faster, reducing headache, nausea, and fatigue the next day.",
+      "Q3": "When should I take it?",
+      "A3": "For best results, drink it after your last drink—before going to sleep.",
+      "Q4": "Can I take it before drinking?",
+      "A4": "Yes, it prepares the liver and helps reduce next-day discomfort.",
+      "Q5": "Is it safe for daily use?",
+      "A5": "Yes, it is made from natural Ayurvedic herbs and safe for regular use.",
+      "Q6": "How fast does it work?",
+      "A6": "You feel the difference the next morning with reduced tiredness and dehydration.",
+      "Q7": "Is it Ayurvedic and chemical-free?",
+      "A7": "Yes, it is 100% Ayurvedic, non-addictive, and free from harmful chemicals."
+    },
+    "SLEEP_QA": {
+      "Q1": "What is MorningShot Sleep Aid?",
+      "A1": "A natural herbal sleep formula that helps you fall asleep faster and enjoy deep, restorative sleep.",
+      "Q2": "Is it habit-forming?",
+      "A2": "No, it is 100% non-habit forming and safe for long-term use.",
+      "Q3": "How quickly does it work?",
+      "A3": "Typically within 20–30 minutes after consumption.",
+      "Q4": "Will I feel sleepy or heavy the next morning?",
+      "A4": "No, you wake up fresh and energised with no grogginess.",
+      "Q5": "Does it help reduce anxiety or overthinking?",
+      "A5": "Yes, calming herbs support relaxation and mental calmness.",
+      "Q6": "Can I take it every night?",
+      "A6": "Yes, it is herbal and suitable for nightly use.",
+      "Q7": "Is it safe with other medications?",
+      "A7": "Generally yes, but consult a doctor if you are on regular medication."
+    },
+    "BEST_SELLERS": "Best Sellers",
+    "REEDLE_SHOT": "Reedle Shot",
+    "GLOSSYS": "Glossys",
+    "PDRN": "PDRN",
+    "DAILY_BOOSTER": "Daily Booster",
+    "REEDLE_SHOT_100": "Reedle Shot 100",
+    "MILD_REEDLE_SHOT_50": "Mild Reedle Shot 50",
+    "REEDLE_SHOT_300": "Reedle Shot 300",
+    "REEDLE_SHOT_700": "Reedle Shot 700",
+    "DEWY_GLOW_SERUM": "Dewy Glow Hyaluronic Acid Serum",
+    "DEWY_GLOW_TONER": "Dewy Glow Hyaluronic Acid Toner",
+    "DEWY_GLOW_CREAM": "Dewy Glow Hyaluronic Acid Soothing Cream",
+    "ML_50": "50 ml",
+    "ML_30": "30 ml",
+    "ML_200": "200 ml",
+    "ML_100": "100 ml",
+    "ML_15": "15 ml",
+    "CICA_REEDLE_VEGAN": "CICA REEDLE + Vegan PDRN",
+    "SLOW_AGING_HAIR": "Slow-aging Hair Ampoule Treatment",
+    "SPECIAL_SCALP_CARE": "Special PDRN Scalp Care",
+    "HAIR_AMPOULE_BUNDLE": "PDRN Hair Ampoule 300 Bundle",
+    "HAIR_AMPOULE_BUNDLE_DESC": "PDRN Reedle shot Hair Ampoule 300dl *2ea",
+    "REAL_REVIEWS": "Real Reviews",
+    "LOCHE_LINEUP": "Loche Lineup",
+    "BRAND_TITLE": "Loche Cosmetics",
+    "BRAND_SUBTITLE": "In-Vogue and Timeless",
+    "MISSION": {
+      "TITLE": "Our Mission",
+      "TEXT_1": "Skincare must go deeper than the surface – that is our belief at Loche Cosmetics.",
+      "TEXT_2": "We deliver an advanced skin-absorption experience powered by Korean innovation.",
+      "TEXT_3": "Our micro-needling essence uses ultra-safe spicules for gentle yet effective skin renewal.",
+      "TEXT_4": "With nano-liposome technology, ingredients break into micro-molecules for deeper delivery.",
+      "TEXT_5": "Our exosome extraction method ensures only the most potent actives reach your skin."
+    },
+    "STORY": {
+      "TITLE": "Reedle Shot Story",
+      "TEXT_1": "Loche Reedle Shot is inspired by premium Korean dermatology treatments.",
+      "TEXT_2": "Using natural micro-spicules, the formula awakens your skin’s regeneration cycle.",
+      "TEXT_3": "Each shot boosts absorption while stimulating fresh, healthy skin turnover."
+    },
+    "CICA": {
+      "TITLE": "Cica Reedle™",
+      "TEXT_1": "Cica Reedle™ combines Centella Asiatica with micro-spicule delivery technology.",
+      "TEXT_2": "It calms irritation, repairs skin barriers, and penetrates deeper for long-lasting results.",
+      "TEXT_3": "Perfect for sensitive, acne-prone, and dull skin."
+    },
+    "TABS": {
+      "MISSION": "Our Mission",
+      "STORY": "Reedle Shot Story",
+      "CICA": "Cica Reedle™"
+    },
+    "PDRN_HAIR_100": "PDRN Reedle Shot Hair Ampoule 100dl",
+    "PDRN_HAIR_300": "PDRN Reedle Shot Hair Ampoule 300dl",
+    "PDRN_HAIR_700": "PDRN Reedle Shot Hair Ampoule 700dl",
+    "PDRN_ESSENCE_100": "PDRN Essence 100",
+    "PDRN_STICK_BALM": "PDRN STICK BALM",
+    "PDRN_CICA": "PDRN CICA",
+    "REEDLE_SHOT_UPPER": "REEDLE SHOT",
+    "GLOSSYS_UPPER": "GLOSSYS",
+    "PDRN_UPPER": "PDRN",
+    "PDRN_CICA_UPPER": "PDRN CICA"
   }
 }

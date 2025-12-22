@@ -8,7 +8,7 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class DataService {
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
   public getuserPayment() {
     return this.http.get<apiResultFormat>('assets/JSON/user-payment.json').pipe(
       map((res: apiResultFormat) => {
@@ -80,184 +80,92 @@ export class DataService {
 
 
 
-public header: header[] = [
-  {
-    tittle: 'About Us',
-    showAsTab: false,
-    separateRoute: false,
-    menu: [
-      // { menuValue: 'HEADER.CEO_GREETING', routes: routes.CeoGreeting,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      // { menuValue: 'HEADER.VISION', routes: routes.Vision2030Module, hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      // { menuValue: 'HEADER.HISTORY', routes: routes.CompanyHistory, hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      // { menuValue: 'HEADER.SOCIAL_CONTRIBUTION', routes: routes.SocialContribution, hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      // { menuValue: 'HEADER.RND_TECH', routes: routes.CeoGreeting,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      // { menuValue: 'HEADER.CLEAN_ROOM', routes: routes.CleanRoom,  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'VT Story',   hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'Village Town',  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'VTs Thoughts', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'Reedles Universe',  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'VT and CICA',  hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'CICA Story', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'CICA Line', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'Store', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-      { menuValue: 'Retail Stores', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    ],
-  },
-  // {
-  //   tittle: 'HEADER.KEY_INGREDIENT',
-  //   showAsTab: false,
-  //   separateRoute: false,
-  //   menu: [
-  //     { menuValue: 'HEADER.AMLA',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //     { menuValue: 'HEADER.GARCIA',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //     { menuValue: 'B.C',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //   ]
-  // },
+  public header: header[] = [
     {
-    tittle: 'Shopping',
-    showAsTab: false,
-    separateRoute: false,
-    menu: [
-      { menuValue: 'Product List',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Best',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'New',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Composition set',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Sale',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'All',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-    ]
-  },
-      {
-    tittle: 'Shopping - Type',
-    showAsTab: false,
-    separateRoute: false,
-    menu: [
-      { menuValue: 'Skincare',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Cleansine',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Mask Pack',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Base Mackeup',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Other',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-    ]
-  },
-    // {
-    // tittle: 'HEADER.SHOPPING',
-    //   showAsTab: false,
-    //   separateRoute: true,
-    //   hasSubRoute: false,
-    //   showSubRoute: false,
-    //     },
-
-  // {
-  //   tittle: 'HEADER.CARDALOG',
-  //   showAsTab: false,
-  //   separateRoute: false,
-  //   menu: [
-  //    { menuValue: 'HEADER.PRODUCT',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //     { menuValue: 'HEADER.MORNINGSHOT', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //     { menuValue: 'HEADER.INGREDIENT', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //     { menuValue: 'HEADER.INDIA_HUB', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-  //     { menuValue: 'HEADER.NEPAL_HUB', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-    
-  //   ]
-  // },
+      tittle: 'HEADER.MENU.ABOUT_US',
+      showAsTab: false,
+      separateRoute: false,
+      menu: [
+        { menuValue: 'HEADER.MENU.VT_STORY', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.VILLAGE_TOWN', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.VTS_THOUGHTS', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.REEDLES_UNIVERSE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.VT_AND_CICA', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CICA_STORY', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CICA_LINE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.STORE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.RETAIL_STORES', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      ],
+    },
     {
-    tittle: 'Shopping - Function',
-    showAsTab: false,
-    separateRoute: false,
-    menu: [
-     { menuValue: 'Moisture / Hydration',  hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Sensitive', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Tone Up', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Pores / Firmness', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'Sebum', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-      { menuValue: 'UV care', hasSubRoute: false, showSubRoute: false, subMenus: [], },
-    
-    ]
-  },
-
-//   {
-//   tittle: 'HEADER.CUSTOMER_CENTER',
-//   showAsTab: false,
-//   separateRoute: false,
-//   menu: [
-//     {
-//       menuValue: 'HEADER.AFFILIATE_INQUIRY', routes: routes.AffiliateInquiry, hasSubRoute: false, showSubRoute: false, subMenus: [],
-//     },
-//     {
-//       menuValue: 'HEADER.QNA', routes: routes.CeoGreeting, hasSubRoute: false, showSubRoute: false, subMenus: [],
-//     },
-//     {
-//       menuValue: 'HEADER.OEM_ODM_INQUIRIES', routes: routes.CeoGreeting, hasSubRoute: false, showSubRoute: false, subMenus: [],
-//     }
-//   ]
-// },
-  {
-  tittle: 'Shopping - Line',
-  showAsTab: false,
-  separateRoute: false,
-  menu: [
-    { menuValue: 'CICA', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'Pro CICA', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'CICA Vital', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'CICA Reti-A', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'CICA Natureal', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'CICA Collagen', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'Reedles', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'PDRN+', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'AZ Care', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-  ]
-},
-
-// {
-//   tittle: 'HEADER.PUBLIC_RELATIONS_CENTER',
-//   showAsTab: false,
-//   separateRoute: false,
-//   menu: [
-//     {
-//       menuValue: 'HEADER.LOCHE_NEWS',
-//       routes: routes.LocheNews,
-//       hasSubRoute: false,
-//       showSubRoute: false,
-//       subMenus: [],
-//     },
-//     {
-//       menuValue: 'HEADER.LOCHE_COMMERCIAL',
-//       routes: routes.LocheNews,
-//       hasSubRoute: false,
-//       showSubRoute: false,
-//       subMenus: [],
-//     },
-//     {
-//       menuValue: 'HEADER.INTRO_PARTNER_COMPANIES',
-//       routes: routes.LocheNews,
-//       hasSubRoute: false,
-//       showSubRoute: false,
-//       subMenus: [],
-//     },
-//     {
-//       menuValue: 'HEADER.INTRO_CI',
-//       routes: routes.CeoGreeting,
-//       hasSubRoute: false,
-//       showSubRoute: false,
-//       subMenus: [],
-//     }
-//   ]
-// }
-{
-  tittle: 'Notice & Member',
-  showAsTab: false,
-  separateRoute: false,
-  menu: [
-    { menuValue: 'Notice', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'Review', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'Q&A', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'Questions', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    { menuValue: 'Notice', hasSubRoute: false, showSubRoute: false, subMenus: [],},
-    
-  ]
-}
+      tittle: 'HEADER.MENU.SHOPPING',
+      showAsTab: false,
+      separateRoute: false,
+      menu: [
+        { menuValue: 'HEADER.MENU.PRODUCT_LIST', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.BEST', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.NEW', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.COMPOSITION_SET', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.SALE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.ALL', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      ]
+    },
+    {
+      tittle: 'HEADER.MENU.SHOPPING_TYPE',
+      showAsTab: false,
+      separateRoute: false,
+      menu: [
+        { menuValue: 'HEADER.MENU.SKINCARE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CLEANSING', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.MASK_PACK', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.BASE_MAKEUP', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.OTHER', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      ]
+    },
+    {
+      tittle: 'HEADER.MENU.SHOPPING_FUNCTION',
+      showAsTab: false,
+      separateRoute: false,
+      menu: [
+        { menuValue: 'HEADER.MENU.MOISTURE_HYDRATION', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.SENSITIVE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.TONE_UP', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.PORES_FIRMNESS', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.SEBUM', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.UV_CARE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      ]
+    },
+    {
+      tittle: 'HEADER.MENU.SHOPPING_LINE',
+      showAsTab: false,
+      separateRoute: false,
+      menu: [
+        { menuValue: 'HEADER.MENU.CICA', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.PRO_CICA', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CICA_VITAL', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CICA_RETI_A', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CICA_NATURAL', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.CICA_COLLAGEN', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.REEDLES', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.PDRN_PLUS', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.AZ_CARE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      ]
+    },
+    {
+      tittle: 'HEADER.MENU.NOTICE_MEMBER',
+      showAsTab: false,
+      separateRoute: false,
+      menu: [
+        { menuValue: 'HEADER.MENU.NOTICE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.REVIEW', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.QNA', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.QUESTIONS', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+        { menuValue: 'HEADER.MENU.NOTICE', hasSubRoute: false, showSubRoute: false, subMenus: [], },
+      ]
+    }
 
 
-];
+  ];
 
 
 
@@ -288,7 +196,7 @@ public header: header[] = [
       para: 'Authentic Customer Reviews – Users can share detailed feedback on product effectiveness, texture, and results.',
     },
   ];
- 
+
   public testimonial = [
     {
       img: 'assets/img/profiles/avatar-02.jpg',
@@ -324,7 +232,7 @@ public header: header[] = [
 
 
 
-  public listingDetails = [ 
+  public listingDetails = [
     {
       img: 'assets/img/product/product-3.avif',
     },
@@ -346,7 +254,7 @@ public header: header[] = [
 
 
 
-  
+
   public thumbnails1 = [
     {
       img: 'assets/img/profiles/avatar-11.jpg',
@@ -365,34 +273,34 @@ public header: header[] = [
     {
       name: 'Marian Hendriques',
       location: 'Dubai, Emirates',
-     
+
       title: '“ From a Satisfied Business Traveler “',
       content: 'As a frequent business traveler, I rely on Dreams Rent for all my transportation needs. Their extensive fleet of vehicles, convenient locations, and competitive pricing make them my go-to choice every time. Plus, their friendly staff always go the extra mile to ensure a seamless rental experience.'
     },
     {
       name: 'Lyon Avenue',
       location: 'Derby, UK',
-     
+
       title: '“ David\'s Urban Exploration “',
       content: 'As a frequent traveler, finding reliable bike rental services is crucial for me. I stumbled upon this website during my recent trip, and I\'m glad I did. The process of booking was seamless, and the prices were reasonable. The best part was the quality of the bikes; they were well-maintained and comfortable to ride.'
     },
     {
       name: 'Westfall Avenue',
       location: 'New York, USA',
-      
+
       title: '“ Sarah\'s Adventure “',
       content: 'Absolutely loved my experience with Dreams Rent! Booking was a breeze; their website is user-friendly and intuitive. The bike I rented was in excellent condition, which made exploring the city a joy. What stood out the most was the exceptional customer service.'
     },
     {
       name: 'Saint Clair Street',
       location: 'Norwich, UK',
-     
+
       title: '“ Edward\'s Scenic Ride “',
       content: 'From start to finish, renting a bike through this website was an absolute pleasure. The website interface was easy to navigate, and I could quickly find the perfect bike for my needs. When I arrived to pick up the bike, I was impressed by its excellent condition. It was evident that they take pride in maintaining their fleet.'
     }
-    
+
   ];
-  
+
   public thumbnails = [
     {
       img: 'assets/img/cars/slider-thum-01.jpg',

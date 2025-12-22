@@ -76,9 +76,55 @@
     "MORNINGSHOT": "モーニングショット",
     "INGREDIENT": "成分",
     "INDIA_HUB": "インド拠点",
-    "NEPAL_HUB": "ネパール拠点"
+    "NEPAL_HUB": "ネパール拠点",
+    "MENU": {
+      "ABOUT_US": "会社概要",
+      "VT_STORY": "VT Story",
+      "VILLAGE_TOWN": "Village Town",
+      "VTS_THOUGHTS": "VTs Thoughts",
+      "REEDLES_UNIVERSE": "Reedles Universe",
+      "VT_AND_CICA": "VT and CICA",
+      "CICA_STORY": "CICA Story",
+      "CICA_LINE": "CICA Line",
+      "STORE": "ストア",
+      "RETAIL_STORES": "取扱店舗",
+      "SHOPPING": "ショッピング",
+      "PRODUCT_LIST": "商品一覧",
+      "BEST": "ベスト",
+      "NEW": "新作",
+      "COMPOSITION_SET": "セット商品",
+      "SALE": "セール",
+      "ALL": "すべて",
+      "SHOPPING_TYPE": "ショッピング - タイプ別",
+      "SKINCARE": "スキンケア",
+      "CLEANSING": "クレンジング",
+      "MASK_PACK": "マスクパック",
+      "BASE_MAKEUP": "ベースメイク",
+      "OTHER": "その他",
+      "SHOPPING_FUNCTION": "ショッピング - 機能別",
+      "MOISTURE_HYDRATION": "保湿 / 水分補給",
+      "SENSITIVE": "敏感肌",
+      "TONE_UP": "トーンアップ",
+      "PORES_FIRMNESS": "毛穴 / ハリ",
+      "SEBUM": "皮脂ケア",
+      "UV_CARE": "UVケア",
+      "SHOPPING_LINE": "ショッピング - ライン別",
+      "CICA": "CICA",
+      "PRO_CICA": "Pro CICA",
+      "CICA_VITAL": "CICA Vital",
+      "CICA_RETI_A": "CICA Reti-A",
+      "CICA_NATURAL": "CICA Natureal",
+      "CICA_COLLAGEN": "CICA Collagen",
+      "REEDLES": "Reedles",
+      "PDRN_PLUS": "PDRN+",
+      "AZ_CARE": "AZ Care",
+      "NOTICE_MEMBER": "お知らせ & 会員",
+      "NOTICE": "お知らせ",
+      "REVIEW": "レビュー",
+      "QNA": "Q&A",
+      "QUESTIONS": "ご質問"
+    }
   },
-
   "FOOTER": {
     "BUSINESS_HOURS": "営業時間：月曜〜土曜",
     "CUSTOMER_CARE": "カスタマーケア",
@@ -227,8 +273,6 @@
     "MAN": "低メンテナンス",
     "MAN_DESC": "簡易アクセスパネルとモジュラー交換部品でダウンタイムを削減。"
   },
-
-  
   "HOME": {
     "NATURAL": "天然成分の処方",
     "WAKE_UP": "すっきり目覚める",
@@ -271,7 +315,6 @@
     "USE_DESC": "忙しい生活でも簡単に使える設計です。",
     "FAQ": "二日酔いドリンク FAQ",
     "AID_FAQ": "睡眠サポート FAQ",
-
     "FAQ_QA": {
       "Q1": "モーニングショット二日酔いドリンクとは？",
       "A1": "肝機能をサポートし、水分補給を促進し、飲酒後の爽快な目覚めを助けるアーユルヴェーダ解毒ドリンクです。",
@@ -288,7 +331,6 @@
       "Q7": "アーユルヴェーダで化学物質不使用ですか？",
       "A7": "はい、100%アーユルヴェーダで安全・非依存性です。"
     },
-
     "SLEEP_QA": {
       "Q1": "モーニングショット睡眠サポートとは？",
       "A1": "素早く眠りにつき、深く回復的な睡眠を促す天然ハーブ睡眠フォーミュラです。",
@@ -304,8 +346,67 @@
       "A6": "はい、ハーブなので毎晩の使用に適しています。",
       "Q7": "他の薬と併用しても安全ですか？",
       "A7": "基本的に安全ですが、常用薬がある場合は医師に相談してください。"
-    }
+    },
+    "BEST_SELLERS": "ベストセラー",
+    "REEDLE_SHOT": "リードルショット",
+    "GLOSSYS": "グロシス",
+    "PDRN": "PDRN",
+    "DAILY_BOOSTER": "デイリーブースター",
+    "REEDLE_SHOT_100": "リードルショット 100",
+    "MILD_REEDLE_SHOT_50": "マイルドリードルショット 50",
+    "REEDLE_SHOT_300": "リードルショット 300",
+    "REEDLE_SHOT_700": "リードルショット 700",
+    "DEWY_GLOW_SERUM": "デューイグロウヒアルロン酸セラム",
+    "DEWY_GLOW_TONER": "デューイグロウヒアルロン酸トナー",
+    "DEWY_GLOW_CREAM": "デューイグロウヒアルロン酸スージングクリーム",
+    "ML_50": "50 ml",
+    "ML_30": "30 ml",
+    "ML_200": "200 ml",
+    "ML_100": "100 ml",
+    "ML_15": "15 ml",
+    "CICA_REEDLE_VEGAN": "シカリードル + ヴィーガンPDRN",
+    "SLOW_AGING_HAIR": "スローエイジングヘアアンプルトリートメント",
+    "SPECIAL_SCALP_CARE": "スペシャルPDRN頭皮ケア",
+    "HAIR_AMPOULE_BUNDLE": "PDRN ヘアアンプル 300 バンドル",
+    "HAIR_AMPOULE_BUNDLE_DESC": "PDRN リードルショット ヘアアンプル 300dl *2個",
+    "REAL_REVIEWS": "リアルレビュー",
+    "LOCHE_LINEUP": "ロチェラインナップ",
+    "BRAND_TITLE": "ロチェ コスメティックス",
+    "BRAND_SUBTITLE": "流行と不変の融合",
+    "MISSION": {
+      "TITLE": "私たちのミッション",
+      "TEXT_1": "スキンケアは表面だけではない - それがロチェコスメティックスの信念です。",
+      "TEXT_2": "私たちは韓国の革新技術を活かした高度な肌浸透体験を提供します。",
+      "TEXT_3": "私たちのマイクロニードルエッセンスは、超安全なスピキュールを使用し、優しく効果的な肌再生を促します。",
+      "TEXT_4": "ナノリポソーム技術により、成分が微細分子に分解され、より深く浸透します。",
+      "TEXT_5": "私たちのエクソソーム抽出法は、最も強力な活性成分のみが肌に届くことを保証します。"
+    },
+    "STORY": {
+      "TITLE": "リードルショットストーリー",
+      "TEXT_1": "ロチェリードルショットは、プレミアムな韓国皮膚科治療からインスピレーションを受けています。",
+      "TEXT_2": "天然のマイクロスピキュールを使用し、肌の再生サイクルを目覚めさせます。",
+      "TEXT_3": "各ショットは吸収を高めながら、新鮮で健康的な肌のターンオーバーを刺激します。"
+    },
+    "CICA": {
+      "TITLE": "シカリードル™",
+      "TEXT_1": "シカリードル™は、ツボクサ（Centella Asiatica）とマイクロスピキュールデリバリー技術を組み合わせています。",
+      "TEXT_2": "刺激を鎮静し、肌のバリアを修復し、より深く浸透して持続的な効果をもたらします。",
+      "TEXT_3": "敏感肌、ニキビ肌、くすんだ肌に最適です。"
+    },
+    "TABS": {
+      "MISSION": "私たちのミッション",
+      "STORY": "リードルショットストーリー",
+      "CICA": "シカリードル™"
+    },
+    "PDRN_HAIR_100": "PDRN リードルショット ヘアアンプル 100dl",
+    "PDRN_HAIR_300": "PDRN リードルショット ヘアアンプル 300dl",
+    "PDRN_HAIR_700": "PDRN リードルショット ヘアアンプル 700dl",
+    "PDRN_ESSENCE_100": "PDRN エッセンス 100",
+    "PDRN_STICK_BALM": "PDRN スティックバーム",
+    "PDRN_CICA": "PDRN シカ",
+    "REEDLE_SHOT_UPPER": "リードルショット",
+    "GLOSSYS_UPPER": "グロシス",
+    "PDRN_UPPER": "PDRN",
+    "PDRN_CICA_UPPER": "PDRN シカ"
   }
-
-
 }

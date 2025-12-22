@@ -201,38 +201,38 @@ export class HomeComponent implements AfterViewInit {
   activeSection = 'mission';
 
 tabs = [
-  { key: 'mission', label: 'Our Mission' },
-  { key: 'story', label: 'Reedle Shot Story' },
-  { key: 'cica', label: 'Cica Reedle™' }
+  { key: 'mission', label: 'HOME.TABS.MISSION' },
+  { key: 'story', label: 'HOME.TABS.STORY' },
+  { key: 'cica', label: 'HOME.TABS.CICA' }
 ];
 
 contentData: any = {
   mission: {
-    title: 'Our Mission',
+    title: 'HOME.MISSION.TITLE',
     text: [
-      'Skincare must go deeper than the surface – that is our belief at Loche Cosmetics.',
-      'We deliver an advanced skin-absorption experience powered by Korean innovation.',
-      'Our micro-needling essence uses ultra-safe spicules for gentle yet effective skin renewal.',
-      'With nano-liposome technology, ingredients break into micro-molecules for deeper delivery.',
-      'Our exosome extraction method ensures only the most potent actives reach your skin.'
+      'HOME.MISSION.TEXT_1',
+      'HOME.MISSION.TEXT_2',
+      'HOME.MISSION.TEXT_3',
+      'HOME.MISSION.TEXT_4',
+      'HOME.MISSION.TEXT_5'
     ]
   },
 
   story: {
-    title: 'Reedle Shot Story',
+    title: 'HOME.STORY.TITLE',
     text: [
-      'Loche Reedle Shot is inspired by premium Korean dermatology treatments.',
-      'Using natural micro-spicules, the formula awakens your skin’s regeneration cycle.',
-      'Each shot boosts absorption while stimulating fresh, healthy skin turnover.'
+      'HOME.STORY.TEXT_1',
+      'HOME.STORY.TEXT_2',
+      'HOME.STORY.TEXT_3'
     ]
   },
 
   cica: {
-    title: 'Cica Reedle™',
+    title: 'HOME.CICA.TITLE',
     text: [
-      'Cica Reedle™ combines Centella Asiatica with micro-spicule delivery technology.',
-      'It calms irritation, repairs skin barriers, and penetrates deeper for long-lasting results.',
-      'Perfect for sensitive, acne-prone, and dull skin.'
+      'HOME.CICA.TEXT_1',
+      'HOME.CICA.TEXT_2',
+      'HOME.CICA.TEXT_3'
     ]
   }
 };
